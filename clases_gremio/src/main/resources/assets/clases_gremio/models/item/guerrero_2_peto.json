@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "clases_gremio:item/guerrero_2_peto"
+  }
+}

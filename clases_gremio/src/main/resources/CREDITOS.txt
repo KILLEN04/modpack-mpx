@@ -1,0 +1,8 @@
+Clases del Gremio - créditos
+
+Modelos y texturas de armaduras y armas usados con permiso de sus autores (proyecto sin fines de lucro):
+- Fantasy Armor: Kenddie y mon1tor
+- Hazen N Stuff: Hazen (armas del Guerrero: Mage Bane, Firebrand, Ancient Warrior's Axe, Draconic Splitter)
+
+Fuente de la ficha: MedievalSharp (SIL Open Font License).
+Diseños de etapas F-E y D-C, arcos, partículas, sonidos y efectos: propios del mod.

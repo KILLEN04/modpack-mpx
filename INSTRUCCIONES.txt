@@ -1,0 +1,150 @@
+==========================================================
+ MODPACK MPXCOSOS - INSTRUCCIONES DEL PROYECTO
+ Mod: Clases del Gremio (clases_gremio)
+ Minecraft 1.21.1 / NeoForge 21.1.265 / GeckoLib 4.9.3
+==========================================================
+
+Este archivo resume lo que queremos lograr con el mod, para que
+cualquiera (o cualquier IA) que trabaje en el repositorio sepa
+hacia donde va el proyecto.
+
+
+----------------------------------------------------------
+1. QUE ES EL MOD
+----------------------------------------------------------
+Un mod de clases para nuestro modpack de fantasia, enfocado en
+ACCION: esquiva/dash, combos de espada, bloqueo con contraataque
+y buena sensacion de impacto. Esa base de combate es comun para
+todas las clases.
+
+Clases (5):
+  - Guerrero    (fuego)
+  - Mago
+  - Arquero
+  - Paladin / Clerigo
+  - Nigromante / Brujo
+
+La clase se elige UNA vez y es permanente. Solo un admin la puede
+cambiar (/gremio clase set / reset).
+
+
+----------------------------------------------------------
+2. EL GREMIO Y LOS RANGOS
+----------------------------------------------------------
+- Cerca del spawn se genera un salon-taberna medieval (el gremio).
+- La clase se elige hablando con la NPC recepcionista (Lyra):
+  menu de dialogo + cartas de clase + confirmacion.
+- Rangos de F a S. Todos empiezan en F.
+- Se sube de rango con misiones, que van en un TABLERO con notas
+  (no en la ficha ni con la recepcionista).
+- Subir de rango da un titulo visible y bonos de estadisticas.
+- La ficha del gremio es una nota tipo papiro con letras de fantasia.
+
+
+----------------------------------------------------------
+3. ARMADURAS Y ARMAS
+----------------------------------------------------------
+- La armadura EVOLUCIONA con el rango (no se desbloquean piezas):
+  set completo desde F, 4 etapas por clase:
+      etapa 1 = F-E, etapa 2 = D-C, etapa 3 = B-A, etapa 4 = S
+  La recepcionista la mejora al entregar la mision de ascenso.
+- Se usan modelos de Fantasy Armor y Hazen N Stuff (tenemos
+  permiso de sus autores, proyecto sin fines de lucro), con stats
+  PROPIOS y balanceados (no los stats/efectos originales).
+  Ver src/main/resources/CREDITOS.txt.
+
+Guerrero:
+  Armaduras: Old Knight (F-E), Chess Board Knight (D-C),
+             Dragonslayer (B-A), Golden Horns (S)
+  Espadas (solo espadas, no hachas):
+             Mage Bane (F-E), Spectrum (D-C),
+             Astralite Cleaver (B-A), Draconic Splitter (S)
+  Los efectos toman el color de la espada en mano.
+  Las espadas deben ser compatibles con el mod Punchy.
+
+Paladin:
+  Armaduras: Silver Knight (F-E), Crucible Knight (D-C),
+             Spark of Dawn (B-A), Seraph (S)
+  Baculos:   Divine Scepter, White Lily's Staff,
+             Glassweaver Scepter, Excalibur (S)
+  Los baculos lanzan rayos de luz.
+
+Arquero:
+  Arcos tipo yumi simetricos que crecen por etapa y ganan
+  elementos (viento, hielo, tormenta). Plumas solo en las puntas
+  y madera que se vuelve cosmica del color del elemento.
+
+SISTEMA DE ATRIBUTOS (tipo Elden Ring):
+  Armas y armaduras NO son exclusivas de una clase. Cada una pide
+  requisitos de atributos; si no los cumples, no la puedes usar.
+
+
+----------------------------------------------------------
+4. PODERES (ARBOL DE PASIVAS)
+----------------------------------------------------------
+- Cada clase tiene un arbol de pasivas.
+- Los nodos suben atributos; al final de cada rama se otorga
+  un PODER.
+- Puntos por experiencia y por rangos/misiones.
+- El rango limita que parte del arbol esta abierta.
+- El arbol se puede reiniciar pagando un costo.
+
+Poderes basados en SPMovesets (permiso de su autor, PolArtiee),
+usando sus texturas de efectos originales. 7 por clase (uno por
+rango), poderes ligeros, nada demasiado pesado. Una clase a la vez.
+  Guerrero   = Pyro + Zyra   (definitiva S: Dragon de Fuego de Pyro)
+  Mago       = Lectro / Nowy / Nita
+  Arquero    = Sonna / Nebu / Vita
+  Paladin    = Goddy
+  Nigromante = Darky
+
+
+----------------------------------------------------------
+5. ESTILO DE ARTE
+----------------------------------------------------------
+- Texturas: pixel art detallado con relieve metalico, brillos
+  intensos y bordes con remaches. Al "mejorar" una textura no se
+  cambia su estilo.
+- Modelos 3D (Blockbench/GeckoLib): estilo suave, bloques mas
+  pequenos, nada tosco. Armaduras al estilo Hazen N Stuff: mezcla
+  de detalles 2D y 3D.
+- NADA de cosas vanilla (particulas, efectos, rayos, etc.):
+  todo lo visual es propio del mod.
+
+
+----------------------------------------------------------
+6. ESTADO ACTUAL DEL CODIGO (lo que hay en este commit)
+----------------------------------------------------------
+Hecho:
+  - Recepcionista con modelo GeckoLib, dialogo y eleccion de clase.
+  - Datos del jugador (clase y rango F-S) + comandos /gremio.
+  - Armaduras del Guerrero en 4 etapas (GeckoLib).
+  - 4 armas del Guerrero (modelos de Hazen) con stats propios.
+  - 4 arcos del Arquero (cazador, viento, escarcha, tormenta).
+  - Libro de clase, HUD de habilidades, particulas y sonidos propios.
+
+Pendiente / por cambiar:
+  - El codigo aun tiene las habilidades viejas del Guerrero
+    (Carga, Grito, Sismico, Furia + pasivas Vida, Firmeza,
+    Escudo, Aliento). Hay que REEMPLAZARLAS por el sistema nuevo:
+    arbol de pasivas + poderes de SPMovesets.
+  - Sistema de atributos con requisitos en armas/armaduras.
+  - Base de combate: dash, combos, bloqueo con contraataque.
+  - Tablero de misiones y subida de rango.
+  - Salon-taberna del gremio generado cerca del spawn.
+  - Clases Mago, Paladin y Nigromante (armaduras, armas, poderes).
+  - Actualizar las armas del Guerrero a la lista nueva
+    (Spectrum y Astralite Cleaver reemplazan a Firebrand y
+    Ancient Warrior's Axe).
+
+
+----------------------------------------------------------
+7. COMO COMPILAR Y PROBAR
+----------------------------------------------------------
+Dentro de la carpeta clases_gremio:
+    gradlew.bat build
+El jar queda en build/libs/clases_gremio-0.1.0.jar.
+Copiarlo a la carpeta mods de la instancia "pruebas" de Prism
+Launcher junto con GeckoLib 4.9.3.
+Para probar directo: gradlew.bat runClient
+Mas detalles en clases_gremio/LEEME.md.

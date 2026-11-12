@@ -1,0 +1,71 @@
+{
+  "arco_viento": {
+    "sounds": [
+      "clases_gremio:arco_viento"
+    ],
+    "subtitle": "subtitles.clases_gremio.arco_viento"
+  },
+  "arco_hielo": {
+    "sounds": [
+      "clases_gremio:arco_hielo"
+    ],
+    "subtitle": "subtitles.clases_gremio.arco_hielo"
+  },
+  "tormenta_trueno": {
+    "sounds": [
+      {
+        "name": "clases_gremio:tormenta_trueno",
+        "attenuation_distance": 48
+      }
+    ],
+    "subtitle": "subtitles.clases_gremio.tormenta_trueno"
+  },
+  "arco_disparo": {
+    "sounds": [
+      "clases_gremio:arco_disparo"
+    ],
+    "subtitle": "subtitles.clases_gremio.arco_disparo"
+  },
+  "armadura_equipar": {
+    "sounds": [
+      "clases_gremio:armadura_equipar"
+    ],
+    "subtitle": "subtitles.clases_gremio.armadura_equipar"
+  },
+  "espadazo": {
+    "sounds": [
+      "clases_gremio:espadazo"
+    ],
+    "subtitle": "subtitles.clases_gremio.espadazo"
+  },
+  "carga": {
+    "sounds": [
+      "clases_gremio:carga"
+    ],
+    "subtitle": "subtitles.clases_gremio.carga"
+  },
+  "grito": {
+    "sounds": [
+      "clases_gremio:grito"
+    ],
+    "subtitle": "subtitles.clases_gremio.grito"
+  },
+  "sismico": {
+    "sounds": [
+      "clases_gremio:sismico"
+    ],
+    "subtitle": "subtitles.clases_gremio.sismico"
+  },
+  "furia": {
+    "sounds": [
+      "clases_gremio:furia"
+    ],
+    "subtitle": "subtitles.clases_gremio.furia"
+  },
+  "ultimo_aliento": {
+    "sounds": [
+      "clases_gremio:ultimo_aliento"
+    ],
+    "subtitle": "subtitles.clases_gremio.ultimo_aliento"
+  }
+}
