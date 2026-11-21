@@ -1,0 +1,108 @@
+{
+  "entries": {
+    "witcher_rpg:bear_school_medallion": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "value": 4.0,
+          "operation": "ADD_VALUE"
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 0.12,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "witcher_rpg:adrenaline_modifier",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        }
+      ]
+    },
+    "witcher_rpg:cat_school_medallion": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": [
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "value": 0.05,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 0.12,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "witcher_rpg:adrenaline_modifier",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        }
+      ]
+    },
+    "witcher_rpg:griffin_school_medallion": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": [
+        {
+          "attribute": "witcher_rpg:sign_intensity",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "spell_power:haste",
+          "value": 0.05,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "witcher_rpg:adrenaline_modifier",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        }
+      ]
+    },
+    "witcher_rpg:wolf_school_medallion": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": [
+        {
+          "attribute": "witcher_rpg:sign_intensity",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 0.12,
+          "operation": "ADD_MULTIPLIED_BASE"
+        },
+        {
+          "attribute": "witcher_rpg:adrenaline_modifier",
+          "value": 0.1,
+          "operation": "ADD_MULTIPLIED_BASE"
+        }
+      ]
+    },
+    "witcher_rpg:pure_silver": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": []
+    },
+    "witcher_rpg:rose_of_remembrance": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": []
+    },
+    "witcher_rpg:crystal_skull": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": []
+    },
+    "witcher_rpg:sunstone": {
+      "enabled": true,
+      "durability": 0,
+      "attributes": []
+    }
+  }
+}

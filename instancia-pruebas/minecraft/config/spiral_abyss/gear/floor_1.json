@@ -1,0 +1,59 @@
+{
+  "armor": {
+    "chance": 0.0,
+    "sets": []
+  },
+  "equipment": {
+    "chance": 0.0,
+    "items": []
+  },
+  "enchantments": {
+    "armor": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:protection",
+        "minecraft:fire_protection",
+        "minecraft:blast_protection",
+        "minecraft:projectile_protection",
+        "minecraft:unbreaking"
+      ]
+    },
+    "melee": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:sharpness",
+        "minecraft:fire_aspect",
+        "minecraft:knockback",
+        "minecraft:unbreaking"
+      ]
+    },
+    "bow": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:power",
+        "minecraft:flame"
+      ]
+    },
+    "crossbow": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:quick_charge",
+        "minecraft:multishot",
+        "minecraft:piercing"
+      ]
+    },
+    "trident": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:impaling",
+        "minecraft:unbreaking"
+      ],
+      "loyalty_level": 1
+    }
+  }
+}

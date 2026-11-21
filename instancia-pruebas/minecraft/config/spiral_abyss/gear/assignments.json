@@ -1,0 +1,22 @@
+{
+  "floors": {
+    "1": "floor_1",
+    "2": "floor_2",
+    "3": "floor_3",
+    "4": "floor_4",
+    "5": "floor_5",
+    "6": "floor_6"
+  },
+  "endless": [
+    "floor_1",
+    "floor_2",
+    "floor_2",
+    "floor_3",
+    "floor_3",
+    "floor_4",
+    "floor_4",
+    "floor_5",
+    "floor_6",
+    "floor_6"
+  ]
+}

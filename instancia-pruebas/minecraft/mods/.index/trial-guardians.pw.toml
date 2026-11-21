@@ -1,0 +1,25 @@
+filename = 'trial_guardians-neoforge-2.1.0-1.21.1.jar'
+name = 'Trial Guardians: The Mythical Four'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'trial_guardians-neoforge-2.1.0+1.21.1.jar'
+
+[download]
+hash = 'd4d72310c2e619b651a3b9ff9df1df604d402033'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9456326
+project-id = 1534320
+
+[[x-prismlauncher-dependencies]]
+addonId = '817423'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '348521'
+type = 'REQUIRED'

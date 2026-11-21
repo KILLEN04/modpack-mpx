@@ -1,0 +1,21 @@
+filename = 'bonehitboxlib-neoforge-1.21.1-0.2.0.jar'
+name = 'BoneHitboxLib'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'BoneHitboxLib 0.2.0 - 1.21.1 NeoForge'
+
+[download]
+hash = '615f12596150b579411fa3f550d300528e107bac'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8897942
+project-id = 1698729
+
+[[x-prismlauncher-dependencies]]
+addonId = '388172'
+type = 'OPTIONAL'

@@ -1,0 +1,16 @@
+#Animate vanilla chests, Ender chests and supported barrels.
+enabled = true
+#Entirely first-person approach, hands and transfers; real left-side inventory. No third-person scenes.
+cinematicScenes = true
+#Vanilla barrels: stand for upward-facing caps; crouch for horizontal caps. Downward-facing barrels keep vanilla behavior.
+barrelScenes = true
+#First-person scenes for all vanilla shulker box colors; original lift/twist, slots and data retained.
+shulkerScenes = true
+#Opening duration including acceleration and settling; 20 ticks = 1 second.
+# Default: 10
+# Range: 4 ~ 24
+openTicks = 10
+#Closing duration including deceleration to rest; 20 ticks = 1 second.
+# Default: 8
+# Range: 4 ~ 24
+closeTicks = 8

@@ -1,0 +1,4 @@
+[client]
+	#CN: 是否默认显示准星指向部位的 OBB。按住绑定键位时仍会临时显示。
+	#EN: Whether to show the crosshair-targeted part OBB by default. Holding the bound key still shows it temporarily.
+	showCrosshairObb = false

@@ -1,0 +1,7 @@
+#Server-owned Crocodile gameplay settings.
+[crocodile]
+	#How many loaded seconds swallowed prey drops remain in a Crocodile's stomach.
+	#Set to 0 to disable digestion. Default: 600 seconds (10 minutes).
+	# Default: 600
+	# Range: 0 ~ 86400
+	digestionTimeSeconds = 600

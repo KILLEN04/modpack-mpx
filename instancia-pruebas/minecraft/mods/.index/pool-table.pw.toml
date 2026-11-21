@@ -1,0 +1,18 @@
+filename = 'pooltable-1.7.1.jar'
+name = 'Pool Table 🎱'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'pooltable-1.7.1.jar'
+
+[download]
+hash = '72050af29980b35ac56e73bdb1c5d9a426a0f34f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9610364
+project-id = 1752268

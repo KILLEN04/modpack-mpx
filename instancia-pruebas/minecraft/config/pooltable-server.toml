@@ -1,0 +1,5 @@
+#How much aiming help the shooter sees on the cloth: FULL, LINE or OFF.
+#Allowed Values: FULL, LINE, OFF
+aimGuide = "FULL"
+#In practice (fewer than two seated players) anyone may move the cue ball.
+practiceBallInHand = true

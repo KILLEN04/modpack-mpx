@@ -1,0 +1,29 @@
+filename = 'emf_compat_supplementaries_neoforge_1.21.1_1.1.1.jar'
+name = 'EMF Compat: Supplementaries'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'emf_compat_supplementaries_neoforge_1.21.1_1.1.1.jar'
+
+[download]
+hash = 'fc41b66d576d281c115c03b7c761c6a70ef2d1a8'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9190934
+project-id = 1605189
+
+[[x-prismlauncher-dependencies]]
+addonId = '844662'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1605113'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '412082'
+type = 'OPTIONAL'

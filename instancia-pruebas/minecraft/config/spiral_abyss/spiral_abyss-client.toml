@@ -1,0 +1,60 @@
+#Position of the Abyss Menu button in survival and creative inventories.
+#Coordinates use GUI-scaled pixels from the top-left corner of the screen.
+#Changes apply immediately after the config reloads, including while the inventory is open.
+#Positions are kept within the visible screen.
+[inventory_button]
+	#Horizontal position. Increase to move right.
+	# Default: 8
+	# Range: > 0
+	x = 8
+	#Vertical position. Increase to move down.
+	# Default: 8
+	# Range: > 0
+	y = 8
+
+#Local Abyss overlay positions and sizes; never sent to the server.
+#Anchors use the free screen space after accounting for each group's size,
+#so edge placements remain visible after resizing or changing GUI scale.
+[abyss_overlay]
+
+	[abyss_overlay.timer]
+		#Horizontal anchor: 0 is left, 1 is right, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		x = -1.0
+		#Vertical anchor: 0 is top, 1 is bottom, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		y = -1.0
+		#Size multiplier relative to the original HUD.
+		# Default: 1.0
+		# Range: 0.5 ~ 2.5
+		scale = 1.0
+
+	[abyss_overlay.challenges]
+		#Horizontal anchor: 0 is left, 1 is right, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		x = -1.0
+		#Vertical anchor: 0 is top, 1 is bottom, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		y = -1.0
+		#Size multiplier relative to the original HUD.
+		# Default: 1.0
+		# Range: 0.5 ~ 2.5
+		scale = 1.0
+
+	[abyss_overlay.rejection]
+		#Horizontal anchor: 0 is left, 1 is right, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		x = -1.0
+		#Vertical anchor: 0 is top, 1 is bottom, -1 retains the default placement.
+		# Default: -1.0
+		# Range: -1.0 ~ 1.0
+		y = -1.0
+		#Size multiplier relative to the original HUD.
+		# Default: 1.0
+		# Range: 0.5 ~ 2.5
+		scale = 1.0

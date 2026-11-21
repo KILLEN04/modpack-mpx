@@ -1,0 +1,21 @@
+filename = 'better_modlist-21.1.5.jar'
+name = 'Better ModList'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '21.1.5'
+
+[download]
+hash = '65f47d2e3d72d9411dd07ac0740c771a1ea2693a1e72d69b83ba7edf3b20abf67510abc88e6fc9f6f71899783315a62e252d08b945a13e8d1baacba6a284d680'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/sbpqhzIG/versions/QRL2q28j/better_modlist-21.1.5.jar'
+
+[update.modrinth]
+mod-id = 'sbpqhzIG'
+version = 'QRL2q28j'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'KUZAAwdD'
+type = 'INCOMPATIBLE'

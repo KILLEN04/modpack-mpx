@@ -1,0 +1,28 @@
+#Server-authoritative Samurai prototype. Spell damage/cooldowns/buff duration are also data-driven: data/samurai_rpg/spell/*.json.
+# Default: 120.0
+# Range: 1.0 ~ 180.0
+parry_angle_degrees = 120.0
+# Default: 5.0
+# Range: 0.0 ~ 12.0
+issen_distance = 5.0
+# Default: 3.0
+# Range: 0.1 ~ 6.0
+tenko_reach_multiplier = 3.0
+# Default: 1.5
+# Range: 0.1 ~ 6.0
+full_moon_reach_multiplier = 1.5
+# Default: 130.0
+# Range: 1.0 ~ 180.0
+full_moon_angle_degrees = 130.0
+# Default: 1.5
+# Range: 1.0 ~ 10.0
+noto_damage_multiplier = 1.5
+# Default: 0.08
+# Range: 0.0 ~ 1.0
+shinto_heal_max_health_fraction = 0.08
+# Default: 0.08
+# Range: 0.0 ~ 2.0
+bushido_speed_multiplier_bonus = 0.08
+# Default: 0.08
+# Range: 0.0 ~ 1.0
+bushido_critical_percentage_points_fraction = 0.08

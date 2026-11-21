@@ -1,0 +1,759 @@
+	[weapons.weapon_ashen_judgment_battleaxe]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_banished_knight_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_black_katana]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_chess_board_knight_polearm]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_crimson_reaper]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_crucible_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_cursed_blade]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dancing_blade_of_ranah]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dark_cover_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dark_lord_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dark_moon_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dawncrest_glaive]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dead_gladiator_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_desert_wind]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dragons_doom]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_dragonslayer_halberd]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_eclipse_soldier_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_estoc]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_evening_ghost_dagger]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_fates_beacon]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_flesh_of_the_feaster_rapier]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_fog_guard_dagger]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_fog_guard_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_forgotten_trace_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_frostbite_axe]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_fury_of_the_storm]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_generic_rapier]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_golden_execution_battleaxe]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_golden_halberd]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_golden_horns_battleaxe]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_grave_sentinel_halberd]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_great_katana]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_hand_of_malenia]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_hefty_club]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_hero_claymore]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_infected_sharp_curved_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_infected_sharp_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_infected_sharp_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_kingslayer]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_knight_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_knight_halberd]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_lady_maria_blade]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_marai_executioner_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_marika_hammer]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_misericorde]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_nagakiba]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_old_blade]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_old_broadsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_old_dagger]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_old_knight_hammer]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_ornstein_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_phantom_needle]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_redeemer_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_rivers_of_blood]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_ronin_katana]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_royal_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_savage_dagger]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_savage_hammer]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_savage_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_savage_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_sharp_curved_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_sharp_spear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_sharp_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_silver_knight_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_soldier_greatspear]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_spark_of_dawn_polearm]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_spider_fang]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_sunset_wings_claymore]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_thief_dagger]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_twinned_glaive]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_volcano_flame]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_wakizashi]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_wandering_wizard_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_watchdog_greatsword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_wind_worshipper_sword]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4
+
+	[weapons.weapon_zweihander]
+		#Attack damage modifier; added to the entity's base damage.
+		# Default: 9.0
+		# Range: 0.0 ~ 2048.0
+		damage = 9.0
+		#Attack speed modifier; added to the entity's base attack speed.
+		# Default: -2.4
+		# Range: -4.0 ~ 1024.0
+		speed = -2.4

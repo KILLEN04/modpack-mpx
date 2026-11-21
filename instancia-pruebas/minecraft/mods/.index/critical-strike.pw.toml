@@ -1,0 +1,18 @@
+filename = 'critical_strike-neoforge-1.0.4+1.21.1.jar'
+name = 'Critical Strike'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'critical_strike-neoforge-1.0.4+1.21.1.jar'
+
+[download]
+hash = 'e6bf40bd03826c5ce2d57153b8bd9f3463cf5111'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7224268
+project-id = 1379562

@@ -1,0 +1,1029 @@
+#The format of this file. The mod keeps it up to date, carrying your settings over when an update renames or moves one. Leave it as it is.
+# Default: 2
+# Range: > 1
+configVersion = 2
+
+#Every mount's stats, multiplied (1.0 = as the data packs set them; 1.2 = 20% more). Applied on top of levels and skills, to wild and tamed mounts alike. One mount at a time: [mounts].
+[stats]
+	#Health.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	maxHealth = 1.0
+	#Speed on the ground.
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	movementSpeed = 1.0
+	#Jump height (jump strength).
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	jumpStrength = 1.0
+	#Top flight speed (still capped by flight.maxSpeed in fantasy-server.toml).
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	flightSpeed = 1.0
+	#Swimming speed, the surface gallop and lava swimming.
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	swimSpeed = 1.0
+	#How much flight stamina a flyer has (how long it flies under power).
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	stamina = 1.0
+	#How fast flying uses stamina up (0: flyers never tire).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	staminaDrain = 1.0
+	#How fast stamina comes back on the ground.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	staminaRegen = 1.0
+	#Natural armour (worn armour adds to it as normal).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	armor = 1.0
+	#Armour toughness.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	armorToughness = 1.0
+	#Damage of a mount's own bite or strike (its abilities: abilities.damage).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	attackDamage = 1.0
+	#Knockback resistance.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	knockbackResistance = 1.0
+
+#Every mount's abilities, multiplied.
+[abilities]
+	#Damage every ability deals.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	damage = 1.0
+	#How long abilities take to recharge (0.5 = twice as often). The phoenix's rebirth keeps its own wait.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	cooldowns = 1.0
+	#How long the effects abilities put on what they hit last: stuns, slowness, poison, a healing pulse's regeneration (auras a mount keeps up on itself and its riders are left alone).
+	# Default: 1.0
+	# Range: 0.25 ~ 10.0
+	effectDuration = 1.0
+
+#How mounts level up. The switches (on/off, the overall XP rate, skill resets) are in fantasy-server.toml. XP from one level to the next is xpBase + xpGrowth * level^xpExponent; as shipped that is 140 XP for level 2, about 4,600 in all for level 10 and 59,000 for level 30. A mount's level is worked out from its XP, so a new curve re-levels existing mounts. Learned skills a lower level, level cap or skill points no longer cover rest, kept, until they are covered again.
+[progression]
+	#The highest level for every mount (0: each mount's own, 30 for every shipped mount). Never goes below the level a mount's last ability or skill unlocks at, so nothing goes out of reach.
+	# Default: 0
+	# Range: 0 ~ 100
+	maxLevel = 0
+	#Skill points every level after the first gives (-1: each mount's own, 1 for every shipped mount).
+	# Default: -1
+	# Range: -1 ~ 5
+	skillPointsPerLevel = -1
+	#How much stats rise per level, multiplied (0: levels don't raise stats).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	statGrowth = 1.0
+	#XP every level takes, before the growth.
+	# Default: 100.0
+	# Range: 0.0 ~ 100000.0
+	xpBase = 100.0
+	#XP added per level, raised to xpExponent.
+	# Default: 40.0
+	# Range: 0.0 ~ 100000.0
+	xpGrowth = 40.0
+	#How much steeper each level gets (1: every level adds the same; 2: later levels take far longer).
+	# Default: 1.4
+	# Range: 0.0 ~ 4.0
+	xpExponent = 1.4
+
+	#XP from each activity, multiplied (its per-minute cap grows with it; 0 turns that activity's XP off). As shipped: riding gives 1.5 XP a second on the move, following 1 per 10 blocks, staying near the owner 2 every 30 seconds, an ability 2 plus 0.6 per second of its cooldown, combat 1.5 per point of damage, a meal 3, a foal 25 and tending 2. Following and staying near the owner are company alone: they give their full rate for 20 minutes together, then fade to nothing by an hour, and come back while the mount and its owner are apart (fresh again after 80 minutes).
+	[progression.xp]
+		#Carrying a rider on the move.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		riding = 1.0
+		#Following its owner or the whistle (wears off with time together).
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		following = 1.0
+		#Spending time within 24 blocks of its owner (wears off with time together).
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		nearOwner = 1.0
+		#Using its abilities.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		abilities = 1.0
+		#Hurting other creatures.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		combat = 1.0
+		#Being fed.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		feeding = 1.0
+		#Having a foal.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		breeding = 1.0
+		#Being saddled, given armour or a chest, or having its inventory opened.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		tending = 1.0
+
+#Taming, feeding and breeding.
+[taming]
+	#How quickly mounts are tamed: temper gained from food and from each ride that ends with you bucked off, and the chance a taming item works (2.0 = twice as fast, 0.5 = half as fast). Taming challenges keep their item counts.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	speed = 1.0
+	#Health a mount gets back from food.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	foodHealing = 1.0
+	#Seconds after having a foal before a mount can breed again (as vanilla animals: 300).
+	# Default: 300
+	# Range: 0 ~ 86400
+	breedingCooldownSeconds = 300
+	#Seconds a foal takes to grow up (as vanilla animals: 1200). Feeding still speeds it up.
+	# Default: 1200
+	# Range: 0 ~ 86400
+	growUpSeconds = 1200
+
+#Untamed mounts going about their lives. The switches are in fantasy-server.toml.
+[wild]
+	#How often untamed mounts do things (2.0 = twice as often, 0.5 = half as often). Busier mounts cost a little more server time.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	activity = 1.0
+	#How close players can come before a shy mount bolts, multiplied (0: nothing is shy).
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	startleDistance = 1.0
+	#Wild mounts notice players in creative mode as they do anyone: shy ones bolt and sleepers wake. Off: creative players go unnoticed, as spectators always do.
+	noticeCreativePlayers = true
+	#How long webs spun by wild spiders last, multiplied.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	webLifetime = 1.0
+	#Webs one wild spider keeps at a time; spinning another takes down its oldest.
+	# Default: 16
+	# Range: 0 ~ 64
+	maxWebsPerSpider = 16
+	#Items a hoarder piles up despawn after five minutes, as dropped items do. Off: they stay until picked up.
+	hoardedItemsDespawn = false
+
+#Wild mounts appearing and leaving. Where and how often each mount spawns is set in data packs (fantasy_spawn and the biome modifiers); a mount's wild spawns are switched off in fantasy-server.toml.
+[spawning]
+	#How likely wild mounts are to spawn, every mount at once, multiplied (0.5 = about half as often, 2.0 = about twice as often, 0: never). Each mount's spawnChance under mounts.<mount> multiplies it again. High values reach every spawn: 1000 means always, so every new chunk of a mount's biomes where it can stand holds one.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	chance = 1.0
+	#How many wild mounts come each time one spawns, every mount at once, multiplied (2.0 = about twice as many, 1.0: as shipped). Each mount's spawnRate under mounts.<mount> multiplies it again; one spawn brings up to 16 in all.
+	# Default: 1.0
+	# Range: 1.0 ~ 5.0
+	rate = 1.0
+	#Untamed mounts no player is near despawn, as monsters do. Tamed, named, leashed, ridden and bred mounts never do. Off: wild mounts stay, as vanilla animals do, except those of the caves (such as the Giant Spider), which always move on.
+	despawnFarAway = false
+
+#Mounts following the Mount Whistle.
+[whistle]
+	#How fast a mount follows its whistle (1.0 = its walking pace).
+	# Default: 1.3
+	# Range: 0.5 ~ 4.0
+	followSpeed = 1.3
+	#Blocks behind its owner a following mount gets before it teleports to them (whistle.teleport in fantasy-server.toml switches teleporting off).
+	# Default: 24
+	# Range: 8 ~ 256
+	teleportDistance = 24
+	#Blocks a mount told to stay with its whistle may wander from where it was told to (0: it stands still). It walks back from a little past this, breaks off a chase at twice this (at least 6 blocks past it), and is brought back if it can't find its way.
+	# Default: 8
+	# Range: 0 ~ 32
+	stayRadius = 8
+
+#The mod's items.
+[items]
+	#Seconds of glowing vision a Golden Carrot Stew gives (its range is abilities.glowingVisionRange in fantasy-server.toml).
+	# Default: 600
+	# Range: 1 ~ 86400
+	stewVisionSeconds = 600
+
+#Quests' rewards, riddles and foes, multiplied. The switches are in fantasy-server.toml.
+[quests]
+	#Bond experience quests give mounts (the server's progression.xpMultiplier applies too).
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	mountXp = 1.0
+	#Experience points quests give players.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	experience = 1.0
+	#How long a riddle waits before the journal shows its hint (0: at once).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hintDelay = 1.0
+	#Health of the named foes quests place.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	bossHealth = 1.0
+	#Damage of the named foes quests place.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	bossDamage = 1.0
+
+#Wild mounts in other mods' biomes, when those mods are installed. The switches (on/off, mounts left out) are in fantasy-server.toml.
+[integrations]
+
+	#Biomes O' Plenty.
+	[integrations.biomesoplenty]
+		#How likely wild mounts are to spawn in Biomes O' Plenty's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Biomes O' Plenty's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Terralith.
+	[integrations.terralith]
+		#How likely wild mounts are to spawn in Terralith's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Terralith's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Oh The Biomes We've Gone.
+	[integrations.biomeswevegone]
+		#How likely wild mounts are to spawn in Oh The Biomes We've Gone's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Oh The Biomes We've Gone's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Nature's Spirit.
+	[integrations.natures_spirit]
+		#How likely wild mounts are to spawn in Nature's Spirit's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Nature's Spirit's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Regions Unexplored.
+	[integrations.regions_unexplored]
+		#How likely wild mounts are to spawn in Regions Unexplored's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Regions Unexplored's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Promenade.
+	[integrations.promenade]
+		#How likely wild mounts are to spawn in Promenade's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Promenade's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Alex's Caves.
+	[integrations.alexscaves]
+		#How likely wild mounts are to spawn in Alex's Caves's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Alex's Caves's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#YUNG's Cave Biomes.
+	[integrations.yungscavebiomes]
+		#How likely wild mounts are to spawn in YUNG's Cave Biomes's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in YUNG's Cave Biomes's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Deeper and Darker.
+	[integrations.deeperdarker]
+		#How likely wild mounts are to spawn in Deeper and Darker's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Deeper and Darker's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Incendium.
+	[integrations.incendium]
+		#How likely wild mounts are to spawn in Incendium's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Incendium's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#Nullscape.
+	[integrations.nullscape]
+		#How likely wild mounts are to spawn in Nullscape's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in Nullscape's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#BetterNether.
+	[integrations.betternether]
+		#How likely wild mounts are to spawn in BetterNether's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in BetterNether's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#BetterEnd.
+	[integrations.betterend]
+		#How likely wild mounts are to spawn in BetterEnd's biomes, multiplied (1.0 = as in vanilla's, 0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always). spawning.chance and each mount's spawnChance apply too.
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many wild mounts come each time one spawns in BetterEnd's biomes, multiplied (1.0 = as in vanilla's). spawning.rate and each mount's spawnRate apply too.
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+#One mount at a time, multiplied on top of everything above.
+[mounts]
+
+	#The unicorn.
+	[mounts.unicorn]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The polar bear.
+	[mounts.polar_bear]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The doom horse.
+	[mounts.doom_horse]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The pegasus.
+	[mounts.pegasus]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The giant spider.
+	[mounts.giant_spider]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The war mammoth.
+	[mounts.war_mammoth]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The dragon turtle.
+	[mounts.dragon_turtle]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The frost sabrecat.
+	[mounts.frost_sabrecat]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The phoenix.
+	[mounts.phoenix]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The crystal stag.
+	[mounts.crystal_stag]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The griffin.
+	[mounts.griffin]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The qilin.
+	[mounts.qilin]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The luna moth.
+	[mounts.luna_moth]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The kitsune.
+	[mounts.kitsune]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The bog toad.
+	[mounts.bog_toad]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The frost drake.
+	[mounts.frost_drake]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The moonwolf.
+	[mounts.moonwolf]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The mossback treant.
+	[mounts.mossback_treant]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The tide narwhal.
+	[mounts.tide_narwhal]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The sky whale.
+	[mounts.sky_whale]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The emerald dragonfly.
+	[mounts.emerald_dragonfly]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The warhorn rhino.
+	[mounts.warhorn_rhino]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The jackalope.
+	[mounts.jackalope]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0
+
+	#The nimbus ram.
+	[mounts.nimbus_ram]
+		#Health.
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		health = 1.0
+		#Ground, flight and swimming speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		speed = 1.0
+		#Ability damage.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		abilityDamage = 1.0
+		#Ability cooldowns (the phoenix's rebirth keeps its own wait).
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		abilityCooldowns = 1.0
+		#How likely it is to spawn in the wild, multiplied, on top of spawning.chance (0.5 = about half as often, 2.0 = about twice as often, 0: never, 1000: always, in every new chunk of its biomes where it can stand).
+		# Default: 1.0
+		# Range: 0.0 ~ 1000.0
+		spawnChance = 1.0
+		#How many come each time it spawns in the wild, multiplied, on top of spawning.rate (2.0 = about twice as many).
+		# Default: 1.0
+		# Range: 1.0 ~ 5.0
+		spawnRate = 1.0

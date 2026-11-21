@@ -1,0 +1,34 @@
+filename = 'morerelics-1.7.7-forRelics-0.12.8-1.0-1.21.1.jar'
+name = 'More Relics'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.7.7-forRelics-0.12.8-1.0'
+
+[download]
+hash = 'ab1ba4ef43a0e9e97e16daba4a8b403691141258df04bd31cd9f0d3abc3987246914637ccf9ed61e55126992e39340331c58365a7858a86d318a7b24286ac18f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/NmYBBHLU/versions/vFU5WdGv/morerelics-1.7.7-forRelics-0.12.8-1.0-1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'NmYBBHLU'
+version = 'vFU5WdGv'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'RH2KUdKJ'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'lhGA9TYQ'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'vvuO3ImH'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'OCJRPujW'
+type = 'REQUIRED'
+version = 'WKEe9sPL'

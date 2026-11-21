@@ -1,0 +1,25 @@
+filename = 'ftb-teams-neoforge-2101.1.12.jar'
+name = 'FTB Teams (NeoForge)'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[NEOFORGE][1.21.1] FTB Teams 2101.1.12'
+
+[download]
+hash = '9c831fbbbccf2178827c3ccf278b2f2a0ce57306'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9434081
+project-id = 404468
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '404465'
+type = 'REQUIRED'

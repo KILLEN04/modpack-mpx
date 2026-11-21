@@ -1,0 +1,33 @@
+filename = 'druids-neoforge-1.4+1.21.1.jar'
+name = 'Druids (RPG Series Plus)'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Druids v1.4 neoforge'
+
+[download]
+hash = 'e509bba032e828d61103e15c2b77ea93580d8fc4'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9326305
+project-id = 1351037
+
+[[x-prismlauncher-dependencies]]
+addonId = '1311513'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1659764'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '807653'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '923030'
+type = 'REQUIRED'

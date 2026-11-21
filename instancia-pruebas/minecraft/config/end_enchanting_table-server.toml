@@ -1,0 +1,26 @@
+#Rules used by the End Enchanting Table.
+[enchantmentRules]
+	#Highest target level players may set. Level 0 removes an enchantment.
+	# Default: 2147483647
+	# Range: > 1
+	maxEnchantmentLevel = 2147483647
+	#Experience levels charged or refunded per normal-enchantment level change.
+	# Default: 2
+	# Range: 0 ~ 1000000
+	normalExperienceCostPerLevel = 2
+	#Experience levels charged or refunded per treasure-enchantment level change.
+	# Default: 5
+	# Range: 0 ~ 1000000
+	treasureExperienceCostPerLevel = 5
+	#Experience levels charged or refunded per curse-enchantment level change.
+	#Curse rules take priority if an enchantment has multiple categories.
+	# Default: 1
+	# Range: 0 ~ 1000000
+	curseExperienceCostPerLevel = 1
+	#Whether lowering an existing enchantment level or removing it is allowed.
+	allowEnchantmentDowngrade = true
+	#Whether lowering or removing an enchantment refunds experience levels.
+	#Refunds are netted against upgrade costs in the same operation.
+	refundExperienceOnDowngrade = true
+	#Whether players in Creative mode can enchant without spending experience levels.
+	creativeModeIsFree = true

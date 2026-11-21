@@ -1,0 +1,72 @@
+{
+  "armor": {
+    "chance": 1.0,
+    "sets": [
+      [
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots"
+      ]
+    ]
+  },
+  "equipment": {
+    "chance": 1.0,
+    "items": [
+      "minecraft:netherite_sword",
+      "minecraft:netherite_pickaxe",
+      "minecraft:netherite_axe",
+      "minecraft:netherite_shovel",
+      "minecraft:netherite_hoe"
+    ]
+  },
+  "enchantments": {
+    "armor": {
+      "chance": 1.0,
+      "level": 5,
+      "entries": [
+        "minecraft:protection",
+        "minecraft:fire_protection",
+        "minecraft:blast_protection",
+        "minecraft:projectile_protection",
+        "minecraft:unbreaking"
+      ]
+    },
+    "melee": {
+      "chance": 1.0,
+      "level": 5,
+      "entries": [
+        "minecraft:sharpness",
+        "minecraft:fire_aspect",
+        "minecraft:knockback",
+        "minecraft:unbreaking"
+      ]
+    },
+    "bow": {
+      "chance": 1.0,
+      "level": 3,
+      "entries": [
+        "minecraft:power",
+        "minecraft:flame"
+      ]
+    },
+    "crossbow": {
+      "chance": 1.0,
+      "level": 3,
+      "entries": [
+        "minecraft:quick_charge",
+        "minecraft:multishot",
+        "minecraft:piercing"
+      ]
+    },
+    "trident": {
+      "chance": 1.0,
+      "level": 5,
+      "entries": [
+        "minecraft:impaling",
+        "minecraft:unbreaking"
+      ],
+      "loyalty_level": 3
+    }
+  }
+}

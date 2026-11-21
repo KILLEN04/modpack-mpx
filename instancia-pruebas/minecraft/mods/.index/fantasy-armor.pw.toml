@@ -1,0 +1,25 @@
+filename = 'fantasy-armor-1.3.1-1.21.1-neoforge.jar'
+name = 'Fantasy Armor (Medieval Series)'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'fantasy-armor-1.3.1-1.21.1-neoforge.jar'
+
+[download]
+hash = 'a0dfcede4dccdbce775654168a9bcb6305db0fb1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9407990
+project-id = 1083998
+
+[[x-prismlauncher-dependencies]]
+addonId = '388172'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1090102'
+type = 'OPTIONAL'

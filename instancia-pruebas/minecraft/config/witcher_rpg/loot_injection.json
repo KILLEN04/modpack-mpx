@@ -1,0 +1,161 @@
+{
+  "entries": {
+    "minecraft:chests/village/village_weaponsmith": {
+      "rolls": 0.5,
+      "items": [
+        {
+          "itemId": "witcher_rpg:silver_ingot",
+          "weight": 3,
+          "minAmount": 1,
+          "maxAmount": 3
+        },
+        {
+          "itemId": "witcher_rpg:steel_ingot",
+          "weight": 3,
+          "minAmount": 1,
+          "maxAmount": 3
+        },
+        {
+          "itemId": "witcher_rpg:dark_iron_ingot",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1
+        },
+        {
+          "itemId": "witcher_rpg:meteorite_ingot",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1
+        }
+      ]
+    },
+    "witcher_rpg:blocks/silver_ore": {
+      "rolls": 0.025,
+      "items": [
+        {
+          "itemId": "witcher_rpg:pure_silver",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1
+        }
+      ]
+    },
+    "witcher_rpg:blocks/deepslate_silver_ore": {
+      "rolls": 0.025,
+      "items": [
+        {
+          "itemId": "witcher_rpg:pure_silver",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1
+        }
+      ]
+    },
+    "witcher_rpg:chests/witcher_grave": {
+      "rolls": 0.15,
+      "items": [
+        {
+          "itemId": "witcher_rpg:lesser_glyph_of_infusion",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:lesser_aard_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:lesser_glyph_of_infusion",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:lesser_igni_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:lesser_runestone",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:lesser_dazhbog_runestone"
+        },
+        {
+          "itemId": "witcher_rpg:lesser_runestone",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:lesser_chernobog_runestone"
+        }
+      ]
+    },
+    "witcher_rpg:chests/old_ruins": {
+      "rolls": 0.2,
+      "items": [
+        {
+          "itemId": "witcher_rpg:glyph",
+          "weight": 2,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:aard_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:glyph",
+          "weight": 2,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:quen_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:glyph",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:yrden_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:runestone",
+          "weight": 2,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:dazhbog_runestone"
+        },
+        {
+          "itemId": "witcher_rpg:runestone",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:triglav_runestone"
+        }
+      ]
+    },
+    "witcher_rpg:chests/hideout_base": {
+      "rolls": 0.1,
+      "items": [
+        {
+          "itemId": "witcher_rpg:greater_glyph",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:greater_yrden_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:greater_glyph",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:greater_quen_glyph"
+        },
+        {
+          "itemId": "witcher_rpg:greater_runestone",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:greater_triglav_runestone"
+        },
+        {
+          "itemId": "witcher_rpg:greater_runestone",
+          "weight": 1,
+          "minAmount": 1,
+          "maxAmount": 1,
+          "cutId": "witcher_rpg:greater_perun_runestone"
+        }
+      ]
+    }
+  }
+}

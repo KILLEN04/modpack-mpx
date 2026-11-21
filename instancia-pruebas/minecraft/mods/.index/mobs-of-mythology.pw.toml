@@ -1,0 +1,29 @@
+filename = 'mobs_of_mythology-neoforge-1.21.1-3.1.0.jar'
+name = 'Mobs of Mythology'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Mobs of Mythology 3.1.0 (NeoForge)'
+
+[download]
+hash = 'ed3c4029bd81b2be7449ee995ef06d9d425cab43'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9622055
+project-id = 699989
+
+[[x-prismlauncher-dependencies]]
+addonId = '817423'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '661293'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'

@@ -1,0 +1,12 @@
+#CN: 对原版斜面方块使用已打包模型的 OBB 几何。此项为服务端配置，会同步到客户端。
+#EN: Use packaged model OBB geometry for vanilla slanted blocks. Server config; synchronized to clients.
+vanillaSlantedBlockObb = true
+#CN: 强制将所有允许的方块碰撞转换为 OBB，优先使用已打包模型；无模型时保留方块自身的几何。空碰撞仍为空。
+#EN: Force OBB collision for every allowed block. Prefer packaged model geometry; otherwise retain the block's own geometry. Empty collision stays empty.
+forceAllBlockObb = false
+#CN: 全局模型几何/强制 OBB 白名单。空列表不限制；支持 namespace:id、namespace:* 或 *。
+#EN: Global model geometry/forced OBB allowlist. Empty allows all. Entries: namespace:id, namespace:*, or *.
+blockModelWhitelist = []
+#CN: 全局模型几何/强制 OBB 黑名单，优先于白名单；被排除的本库模型 OBB 回退为 AABB，其他原生形状保持原样。
+#EN: Global model geometry/forced OBB denylist. Overrides the allowlist; excluded library model OBBs use AABBs; other native shapes remain unchanged.
+blockModelBlacklist = []

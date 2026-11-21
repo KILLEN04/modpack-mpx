@@ -1,0 +1,78 @@
+{
+  "armor": {
+    "chance": 0.4,
+    "sets": [
+      [
+        "minecraft:golden_helmet",
+        "minecraft:golden_chestplate",
+        "minecraft:golden_leggings",
+        "minecraft:golden_boots"
+      ],
+      [
+        "minecraft:chainmail_helmet",
+        "minecraft:chainmail_chestplate",
+        "minecraft:chainmail_leggings",
+        "minecraft:chainmail_boots"
+      ]
+    ]
+  },
+  "equipment": {
+    "chance": 0.4,
+    "items": [
+      "minecraft:golden_sword",
+      "minecraft:golden_pickaxe",
+      "minecraft:golden_axe",
+      "minecraft:golden_shovel",
+      "minecraft:golden_hoe"
+    ]
+  },
+  "enchantments": {
+    "armor": {
+      "chance": 0.4,
+      "level": 2,
+      "entries": [
+        "minecraft:protection",
+        "minecraft:fire_protection",
+        "minecraft:blast_protection",
+        "minecraft:projectile_protection",
+        "minecraft:unbreaking"
+      ]
+    },
+    "melee": {
+      "chance": 0.4,
+      "level": 2,
+      "entries": [
+        "minecraft:sharpness",
+        "minecraft:fire_aspect",
+        "minecraft:knockback",
+        "minecraft:unbreaking"
+      ]
+    },
+    "bow": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:power",
+        "minecraft:flame"
+      ]
+    },
+    "crossbow": {
+      "chance": 0.0,
+      "level": 1,
+      "entries": [
+        "minecraft:quick_charge",
+        "minecraft:multishot",
+        "minecraft:piercing"
+      ]
+    },
+    "trident": {
+      "chance": 0.4,
+      "level": 2,
+      "entries": [
+        "minecraft:impaling",
+        "minecraft:unbreaking"
+      ],
+      "loyalty_level": 1
+    }
+  }
+}

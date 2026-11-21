@@ -1,0 +1,45 @@
+filename = 'samurai-rpg-1.0.4.jar'
+name = 'Samurai (RPG Series Addon)'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'samurai-rpg-1.0.4.jar'
+
+[download]
+hash = '6a6ebeb931665b47153571987b394e66dd0a50a0'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9309494
+project-id = 1757663
+
+[[x-prismlauncher-dependencies]]
+addonId = '807653'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1311561'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1659764'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '639842'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1311513'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1379562'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1230054'
+type = 'OPTIONAL'

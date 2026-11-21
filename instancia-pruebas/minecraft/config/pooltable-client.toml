@@ -1,0 +1,9 @@
+#After the break, move the camera behind the cue ball while lining up a shot.
+aimCamera = true
+#How far the cue turns per mouse movement in the ball camera (1 = like turning your head).
+#Sneaking makes it a quarter of this.
+# Default: 0.4
+# Range: 0.05 ~ 2.0
+aimSensitivity = 0.4
+#Draw the balls as little cubes that slide instead of roll. They play exactly the same.
+cubeBalls = false

@@ -1,0 +1,1367 @@
+#The format of this file. The mod keeps it up to date, carrying your settings over when an update renames or moves one. Leave it as it is.
+# Default: 2
+# Range: > 1
+configVersion = 2
+
+#Every skill of every mount. Each dial in this file multiplies what a skill adds (its stat raises and ability bonuses): 1.0 = as shipped, 0.5 = half as strong, 2.0 = twice, 0 = nothing. A skill's strength is this dial times its mount's allSkills times its own dial. Skill costs, ranks and unlock levels are set in data packs (fantasy_skill_tree); skill points per level and the level cap are in fantasy-balance.toml.
+[global]
+	#Every skill of every mount.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	strength = 1.0
+
+#The Unicorn's skills (skill tree fantasy:unicorn). These only grant or reshape an ability, so they have no dial: Starlight Gallop, Spring's Grace, Winter Hooves, Dawnbringer.
+[unicorn]
+	#Every Unicorn skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Moonlit Foal: +4% Health, +3% Speed (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moonlit_foal = 1.0
+	#Silver Hooves: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	silver_hooves = 1.0
+	#Distant Glimmer: Blink Dash distance +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	distant_glimmer = 1.0
+	#Quickening: Blink Dash cooldown -12% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quickening = 1.0
+	#Unbridled: +5% Jump, +3% Speed per rank (3 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	unbridled = 1.0
+	#Gentle Soul: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gentle_soul = 1.0
+	#Soothing Touch: Regrowth cooldown -12% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	soothing_touch = 1.0
+	#Font of Life: Regrowth cooldown -20%, reshaped (not scaled), +8% Health (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	font_of_life = 1.0
+	#Harmony: +10% Ability power, +8% Ability haste (3 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	harmony = 1.0
+	#Radiant Horn: Moon Dust radius +10%, damage +25% per rank (3 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	radiant_horn = 1.0
+
+#The Polar Bear's skills (skill tree fantasy:polar_bear). These only grant or reshape an ability, so they have no dial: Crushing Weight, Floe Leaper, Glacier Stride, Rime Breath.
+[polar_bear]
+	#Every Polar Bear skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Thick Fur: +5% Health, +5% Swim speed (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_fur = 1.0
+	#Heavy Paws: +5% Damage per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heavy_paws = 1.0
+	#Long Pounce: Pounce forward +15%, damage +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_pounce = 1.0
+	#Patient Hunter: Pounce cooldown -12% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	patient_hunter = 1.0
+	#Stalker's Crouch: +4% Speed per rank (3 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	stalkers_crouch = 1.0
+	#White Death: Pounce reshaped (not scaled), +10% Damage (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	white_death = 1.0
+	#Seal Hunter: +6% Swim speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	seal_hunter = 1.0
+	#Winter Fat: +6% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	winter_fat = 1.0
+	#Scarred Hide: +1 Armour, +0.1 Steadiness per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	scarred_hide = 1.0
+	#Arctic Roar: grants Roar (not scaled), +8% Health (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	arctic_roar = 1.0
+
+#The Doom Horse's skills (skill tree fantasy:doom_horse). These only grant or reshape an ability, so they have no dial: Wildfire, Cinder Stride, Doomsday Gallop, Soul Wail.
+[doom_horse]
+	#Every Doom Horse skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Ember Heart: +3% Speed, +4% Damage (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ember_heart = 1.0
+	#Burning Hooves: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	burning_hooves = 1.0
+	#Ruinous Charge: Charge damage +12%, knockback +8% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ruinous_charge = 1.0
+	#Hellfire Lungs: Fire Breath range +10%, damage per second +12% per rank (3 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hellfire_lungs = 1.0
+	#Brimstone Blood: +6% Ability power, +4% Damage per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	brimstone_blood = 1.0
+	#Inferno: Fire Breath reshaped (not scaled), +10% Ability power (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	inferno = 1.0
+	#Relentless: Charge duration ticks +10%, cooldown -12% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	relentless = 1.0
+	#Dread Reach: Roar radius +15%, strength +15%, cooldown -8% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	dread_reach = 1.0
+	#Wraith Hide: +1 Armour, +4% Health per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wraith_hide = 1.0
+	#Soul Harvest: Roar reshaped (not scaled), Charge reshaped (not scaled), +10% Ability power (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	soul_harvest = 1.0
+
+#The Pegasus's skills (skill tree fantasy:pegasus). These only grant or reshape an ability, so they have no dial: Thunderhead, Cyclone.
+[pegasus]
+	#Every Pegasus skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Fledgling Wings: +3% Flight speed, +5% Stamina (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fledgling_wings = 1.0
+	#Gale Force: Wind Gust radius +12%, strength +10% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gale_force = 1.0
+	#Eye of the Storm: Wind Gust cooldown -12% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	eye_of_the_storm = 1.0
+	#Streamlined: +2% Flight speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	streamlined = 1.0
+	#Keen Eyes: Dive Strike damage +20%, radius +10% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	keen_eyes = 1.0
+	#Talon Dive: Dive Strike speed +20%, cooldown -25% (2 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	talon_dive = 1.0
+	#Comet: Dive Strike reshaped (not scaled), +10% Ability power (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	comet = 1.0
+	#Endless Sky: +15% Stamina per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	endless_sky = 1.0
+	#Blessed Mane: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	blessed_mane = 1.0
+	#Halo: +2 Armour, +0.1 Steadiness (2 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	halo = 1.0
+	#Seraph: Regrowth cooldown -20%, reshaped (not scaled), +10% Health (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	seraph = 1.0
+	#Updraft: +4% Flight speed, +10% Stamina (2 points)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	updraft = 1.0
+	#Tailwind Bond: +12% Ability haste, +5% Speed (2 points)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	tailwind_bond = 1.0
+
+#The Giant Spider's skills (skill tree fantasy:giant_spider). These only grant or reshape an ability, so they have no dial: Twin Fangs.
+[giant_spider]
+	#Every Giant Spider skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Eight Eyes: +3% Speed, +5% Ability power (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	eight_eyes = 1.0
+	#Thick Silk: Web Shot root ticks +20% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_silk = 1.0
+	#Wide Web: Web Shot half angle +10%, range +12% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wide_web = 1.0
+	#Quick Spinner: Web Shot cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quick_spinner = 1.0
+	#Great Web: Web Shot reshaped (not scaled), +10% Ability haste (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	great_web = 1.0
+	#Venom Glands: +6% Ability power per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	venom_glands = 1.0
+	#Potent Venom: Venom Spit damage +20%, speed +10% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	potent_venom = 1.0
+	#Widow's Kiss: Venom Spit cooldown -20%, reshaped (not scaled), +10% Ability power (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	widows_kiss = 1.0
+	#Long Legs: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_legs = 1.0
+	#Chitin Plates: +1 Armour, +3% Health per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	chitin_plates = 1.0
+	#Leaping Hunter: Pounce forward +15%, damage +20% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	leaping_hunter = 1.0
+	#Huntsman: Pounce cooldown -20%, reshaped (not scaled), +5% Speed (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	huntsman = 1.0
+	#Trip Lines: +8% Ability haste per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	trip_lines = 1.0
+	#Lurker: +4% Health, +4% Ability power per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lurker = 1.0
+
+#The War Mammoth's skills (skill tree fantasy:war_mammoth).
+[war_mammoth]
+	#Every War Mammoth skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Heavy Tread: Trample damage +25% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heavy_tread = 1.0
+	#Howdah Crew: Archer Volley damage +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	howdah_crew = 1.0
+	#Woolly Coat: +4% Health per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	woolly_coat = 1.0
+	#Long Tusks: Charge damage +12%, knockback +10% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_tusks = 1.0
+	#Earthshaker: Stomp radius +10%, stun ticks +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	earthshaker = 1.0
+	#Quiver Bearers: Archer Volley count +35% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quiver_bearers = 1.0
+	#Brazen Trumpet: Roar radius +15%, strength +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	brazen_trumpet = 1.0
+	#Ironbark Hide: +1 Armour per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ironbark_hide = 1.0
+	#Immovable: +0.1 Steadiness, +3% Health per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	immovable = 1.0
+	#Battle Rhythm: Charge cooldown -10%, Stomp cooldown -10% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	battle_rhythm = 1.0
+	#Mountain March: +4% Speed, +3% Health per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	mountain_march = 1.0
+	#Old Campaigner: +10% Ability power, +10% Ability haste (3 points, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	old_campaigner = 1.0
+	#Earthsplitter: Stomp reshaped (not scaled), +10% Damage (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	earthsplitter = 1.0
+	#Arrow Storm: Archer Volley cooldown -15%, reshaped (not scaled) (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	arrow_storm = 1.0
+	#Living Fortress: +12% Health, +3 Armour, +0.15 Steadiness, Howl reshaped (not scaled) (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	living_fortress = 1.0
+
+#The Dragon Turtle's skills (skill tree fantasy:dragon_turtle). These only grant or reshape an ability, so they have no dial: Abyssal Sight, Wave Rider, Tsunami, Living Island.
+[dragon_turtle]
+	#Every Dragon Turtle skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Ancient Shell: +4% Health, +1 Armour (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ancient_shell = 1.0
+	#Strong Flippers: +5% Swim speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	strong_flippers = 1.0
+	#Riptide: Surge damage +15%, knockback +10% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	riptide = 1.0
+	#Undertow: Maelstrom radius +12%, strength +10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	undertow = 1.0
+	#Thick Plates: +1 Armour, +3% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_plates = 1.0
+	#Barnacle Crust: Shell Guard damage multiplier -8% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	barnacle_crust = 1.0
+	#Bastion: Shell Retreat duration ticks +10%, cooldown -10% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	bastion = 1.0
+	#Immovable: +1 Toughness, +0.05 Steadiness per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	immovable = 1.0
+	#Elder's Heart: +6% Health, +8% Ability haste (3 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	elders_heart = 1.0
+	#Tidecaller: Surge cooldown -8%, Maelstrom cooldown -10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	tidecaller = 1.0
+	#World Turtle: +12% Health, +3 Armour, Maelstrom reshaped (not scaled) (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	world_turtle = 1.0
+
+#The Frost Sabrecat's skills (skill tree fantasy:frost_sabrecat). These only grant or reshape an ability, so they have no dial: Bounding Stride, Glacier Paws.
+[frost_sabrecat]
+	#Every Frost Sabrecat skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Cold Blood: +4% Damage, +3% Speed (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cold_blood = 1.0
+	#Sabre Fangs: +5% Damage per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sabre_fangs = 1.0
+	#Long Leap: Pounce forward +12%, damage +12% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_leap = 1.0
+	#Ghost Paws: +4% Speed per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ghost_paws = 1.0
+	#Ambush: Pounce radius +10%, cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ambush = 1.0
+	#Apex Hunter: +4% Damage, +3% Speed per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	apex_hunter = 1.0
+	#Killing Leap: Pounce reshaped (not scaled), +8% Damage (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	killing_leap = 1.0
+	#Thick Pelt: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_pelt = 1.0
+	#Biting Cold: Frost Breath range +12%, damage per second +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	biting_cold = 1.0
+	#Snowbound: +1 Armour, +0.05 Steadiness per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	snowbound = 1.0
+	#Blizzard Heart: Ink Cloud radius +12%, cooldown -10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	blizzard_heart = 1.0
+	#Eternal Winter: Ink Cloud reshaped (not scaled), +2 Armour (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	eternal_winter = 1.0
+	#Snow Stalker: +4% Speed, +3% Damage per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	snow_stalker = 1.0
+	#Frozen Fury: Pounce damage +15%, Frost Breath cooldown -12% (2 points, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	frozen_fury = 1.0
+
+#The Phoenix's skills (skill tree fantasy:phoenix). These only grant or reshape an ability, so they have no dial: Beacon Plumage, Ash Shield, Warm Updraft.
+[phoenix]
+	#Every Phoenix skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#First Spark: +2% Flight speed, +5% Ability power (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	first_spark = 1.0
+	#Bright Plumage: +4% Health, +5% Stamina per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	bright_plumage = 1.0
+	#Rising Heat: +3% Flight speed, +6% Ability haste (2 points, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rising_heat = 1.0
+	#Solar Wings: +2% Flight speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	solar_wings = 1.0
+	#Searing Light: +6% Ability power per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	searing_light = 1.0
+	#High Noon: Fire Breath range +12%, damage per second +12% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	high_noon = 1.0
+	#Supernova: Fire Breath reshaped (not scaled), +10% Ability power (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	supernova = 1.0
+	#Warm Embers: Regrowth cooldown -10% per rank (3 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	warm_embers = 1.0
+	#Smoldering Heart: +5% Health, +1 Armour per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	smoldering_heart = 1.0
+	#Undying Flame: Regrowth cooldown -20%, reshaped (not scaled), +10% Health (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	undying_flame = 1.0
+	#Eternal Wings: changes how it moves (not scaled), +3% Flight speed (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	eternal_wings = 1.0
+
+#The Crystal Stag's skills (skill tree fantasy:crystal_stag). These only grant or reshape an ability, so they have no dial: Deep Crystal, Prism Step, Stair of Stars, Prism Nova.
+[crystal_stag]
+	#Every Crystal Stag skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Heart Crystal: +3% Speed, +5% Ability haste (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heart_crystal = 1.0
+	#Glass Hooves: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	glass_hooves = 1.0
+	#Clear Sight: Stone Gaze range +10%, duration ticks +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	clear_sight = 1.0
+	#Far Blink: Blink Dash distance +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	far_blink = 1.0
+	#Amethyst Body: +5% Health, +1 Armour per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	amethyst_body = 1.0
+	#Refracting Antlers: +6% Ability power per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	refracting_antlers = 1.0
+	#Flicker: Blink Dash cooldown -12% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	flicker = 1.0
+	#Perfect Resonance: +10% Ability haste, +4% Health (2 points, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	resonance = 1.0
+	#Shard Storm: Moon Dust radius +12%, damage +15% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	shard_storm = 1.0
+	#Starlit Bound: +5% Jump, +3% Speed per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	starlit_bound = 1.0
+	#Lantern Crown: Glow reshaped (not scaled), +5% Ability power (2 points, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lantern_crown = 1.0
+	#Living Geode: +10% Health, +3 Armour, +10% Ability haste (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	living_geode = 1.0
+
+#The Griffin's skills (skill tree fantasy:griffin). These only grant or reshape an ability, so they have no dial: Stoop, Skyward Tempest.
+[griffin]
+	#Every Griffin skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Royal Blood: +4% Damage, +2% Flight speed (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	royal_blood = 1.0
+	#Sharp Talons: Dive Strike damage +12% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sharp_talons = 1.0
+	#Broad Pinions: +3% Flight speed, +5% Stamina per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	broad_pinions = 1.0
+	#Gale Wings: Wind Gust radius +12%, strength +12% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gale_wings = 1.0
+	#Lion Heart: +4% Health, +3% Damage per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lion_heart = 1.0
+	#Golden Mane: +1 Armour, +0.05 Steadiness per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	golden_mane = 1.0
+	#Crowned: +8% Ability power, +8% Ability haste (3 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	crowned = 1.0
+	#High Hunter: Dive Strike radius +15%, cooldown -10% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	high_hunter = 1.0
+	#Rising Air: Uplift radius +12%, cooldown -10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rising_air = 1.0
+	#Pride Leader: +5% Health, +4% Damage per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	pride_leader = 1.0
+	#Sky Sovereign: Dive Strike reshaped (not scaled), +3% Flight speed (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sky_sovereign = 1.0
+	#Lord of Beasts: grants Roar (not scaled), +8% Damage (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lord_of_beasts = 1.0
+
+#The Qilin's skills (skill tree fantasy:qilin). These only grant or reshape an ability, so they have no dial: Higher Clouds, Bright Omen.
+[qilin]
+	#Every Qilin skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Auspicious Birth: +4% Health, +5% Ability power (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	auspicious_birth = 1.0
+	#Cloud Step: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloud_step = 1.0
+	#Racing Clouds: Charge speed +8%, duration ticks +15%, cooldown -8% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	racing_clouds = 1.0
+	#Gate of Heaven: +8% Ability power, +8% Ability haste (3 points, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gate_of_heaven = 1.0
+	#Thunder Mane: Call Lightning damage +12%, cooldown -10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thunder_mane = 1.0
+	#Thunder of Heaven: Call Lightning cooldown -25%, reshaped (not scaled), +8% Ability power (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thunder_of_heaven = 1.0
+	#Heaven's Mercy: grants Regrowth (not scaled), +8% Health (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heavens_mercy = 1.0
+	#Gentle Soul: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gentle_soul = 1.0
+	#Lantern Bearer: Moon Dust radius +12%, cooldown -10% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lantern_bearer = 1.0
+	#Jade Scales: +1 Armour, +0.05 Steadiness per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	jade_scales = 1.0
+	#Cloud Dancer: +5% Jump, +3% Speed per rank (3 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloud_dancer = 1.0
+	#Lightfoot: changes how it moves (not scaled), +5% Speed (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lightfoot = 1.0
+
+#The Luna Moth's skills (skill tree fantasy:luna_moth). These only grant or reshape an ability, so they have no dial: Lunar Haze, Mesmerising Eyes.
+[luna_moth]
+	#Every Luna Moth skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Moonborn: +5% Stamina, +5% Ability power (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moonborn = 1.0
+	#Silver Scales: Moon Dust radius +12%, particle count +15% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	silver_scales = 1.0
+	#Wide Eyespots: Ink Cloud radius +15%, cooldown -10% per rank (3 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wide_eyespots = 1.0
+	#Full Moon: Moon Dust cooldown -20%, reshaped (not scaled) (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	full_moon = 1.0
+	#Velvet Wings: +6% Stamina per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	velvet_wings = 1.0
+	#Downy Body: +6% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	downy_body = 1.0
+	#Drifting Wings: changes how it moves (not scaled), +5% Flight speed (2 points, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	drifting_wings = 1.0
+	#Moon Wanderer: +4% Flight speed, +5% Stamina per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moon_wanderer = 1.0
+	#Sunwing: Seasonal Flight reshaped (not scaled), +6% Flight speed (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sunwing = 1.0
+	#Moth Lantern: Glow reshaped (not scaled), +8% Ability haste (2 points)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moth_lantern = 1.0
+	#Rising Moon: Uplift radius +15%, cooldown -10% per rank (3 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rising_moon = 1.0
+	#Harvest Moon: Uplift reshaped (not scaled), +10% Ability power (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	harvest_moon = 1.0
+
+#The Kitsune's skills (skill tree fantasy:kitsune). These only grant or reshape an ability, so they have no dial: Fox Lanterns, Skyward Tails, Mirror Veil.
+[kitsune]
+	#Every Kitsune skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Fox Kit: +3% Speed, +5% Ability power (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fox_kit = 1.0
+	#Shrine Offerings: +4% Speed, +5% Ability haste per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	shrine_offerings = 1.0
+	#Second Tail: +8% Ability power, +5% Health (2 points)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	second_tail = 1.0
+	#Kindled Wisps: Foxfire damage +15% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	kindled_wisps = 1.0
+	#Ember Tails: Foxfire speed +10%, cooldown -12% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ember_tails = 1.0
+	#Hundred Flames: Foxfire reshaped (not scaled), +10% Ability power (5 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hundred_flames = 1.0
+	#Fox Leap: changes how it moves (not scaled), +5% Jump (2 points, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fox_leap = 1.0
+	#Swift Spirit: +5% Speed per rank (3 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	swift_spirit = 1.0
+	#Elder Wisdom: +6% Ability power, +6% Ability haste per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	elder_wisdom = 1.0
+	#Ninth Tail: changes how it moves (not scaled), +8% Speed, +10% Ability haste (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ninth_tail = 1.0
+	#Shifting Shape: Illusion Veil cooldown -12% per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	shifting_shape = 1.0
+	#Fleeting Step: Blink Dash distance +20%, cooldown -10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fleeting_step = 1.0
+	#Thousand Faces: Illusion Veil cooldown -20%, reshaped (not scaled), Blink Dash reshaped (not scaled) (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thousand_faces = 1.0
+
+#The Bog Toad's skills (skill tree fantasy:bog_toad). These only grant or reshape an ability, so they have no dial: Lily Hop, Reeling Tongue, Great Leap.
+[bog_toad]
+	#Every Bog Toad skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#No Longer a Tadpole: +4% Jump, +4% Health (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	no_longer_a_tadpole = 1.0
+	#Sticky Tongue: Tongue Lash range +12% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sticky_tongue = 1.0
+	#Spring Legs: +4% Jump per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spring_legs = 1.0
+	#Hungry Lash: Tongue Lash damage +20%, cooldown -10% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hungry_lash = 1.0
+	#Booming Croak: +8% Ability haste per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	booming_croak = 1.0
+	#Swamp Swimmer: +6% Swim speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	swamp_swimmer = 1.0
+	#Fouler Gas: Spore Cloud radius +15%, cooldown -10% per rank (3 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fouler_gas = 1.0
+	#Toad's Feast: +5% Health, +5% Damage per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	toads_feast = 1.0
+	#Bog King's Belch: Spore Cloud cooldown -15%, reshaped (not scaled) (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	bog_kings_belch = 1.0
+	#Great Gulp: Tongue Lash cooldown -25%, reshaped (not scaled) (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	great_gulp = 1.0
+
+#The Frost Drake's skills (skill tree fantasy:frost_drake). These only grant or reshape an ability, so they have no dial: Whiteout.
+[frost_drake]
+	#Every Frost Drake skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Frost Hatchling: +4% Health, +2% Flight speed (1 point)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	frost_hatchling = 1.0
+	#Cold Lungs: Frost Breath range +12% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cold_lungs = 1.0
+	#Biting Cold: Frost Breath damage per second +25%, half angle +10% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	biting_cold = 1.0
+	#Endless Blizzard: Frost Breath cooldown -15%, reshaped (not scaled) (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	blizzard = 1.0
+	#Deep Freeze: Roar radius +15%, strength +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_freeze = 1.0
+	#Spreading Rime: Frost Walk reshaped (not scaled), Roar cooldown -15% (2 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spreading_rime = 1.0
+	#Glacier's Wrath: Roar cooldown -15%, reshaped (not scaled) (4 points, from level 20)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	glaciers_wrath = 1.0
+	#Winter Wings: +2% Flight speed, +5% Stamina per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	winter_wings = 1.0
+	#Cold Updrafts: changes how it moves (not scaled), +8% Stamina (2 points, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cold_updrafts = 1.0
+	#Polar Wind: +3% Flight speed per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	polar_wind = 1.0
+	#Ice Talons: +6% Damage per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ice_talons = 1.0
+	#Icy Scales: +1 Armour per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	icy_scales = 1.0
+	#Hoarfrost Coat: Regrowth cooldown -12% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hoarfrost_coat = 1.0
+	#Heart of Winter: Regrowth reshaped (not scaled), +10% Health (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heart_of_winter = 1.0
+
+#The Moonwolf's skills (skill tree fantasy:moonwolf). These only grant or reshape an ability, so they have no dial: Pack Bond, Moonstalker, Lunar Mark.
+[moonwolf]
+	#Every Moonwolf skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Moon-Touched: +3% Speed, +3% Damage per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moon_touched = 1.0
+	#Rallying Cry: Howl cooldown -10% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rallying_cry = 1.0
+	#Thick Ruff: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_ruff = 1.0
+	#Den Guardian: +1 Armour, +0.05 Steadiness per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	den_guardian = 1.0
+	#Alpha's Call: Howl cooldown -20%, reshaped (not scaled), +8% Health (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	alphas_call = 1.0
+	#Long Stride: +4% Speed per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_stride = 1.0
+	#Sharp Fangs: +5% Damage per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sharp_fangs = 1.0
+	#Killing Leap: Pounce forward +15%, damage +20% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	killing_leap = 1.0
+	#Silver Claws: Pounce cooldown -15%, reshaped (not scaled) (2 points, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	silver_claws = 1.0
+	#Night Runner: +3% Speed, +4% Jump per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	night_runner = 1.0
+	#Rising Moon: Moon Dust radius +15%, cooldown -10% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rising_moon = 1.0
+	#Eclipse: Moon Dust reshaped (not scaled), +10% Ability power (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	eclipse = 1.0
+
+#The Mossback Treant's skills (skill tree fantasy:mossback_treant). These only grant or reshape an ability, so they have no dial: Rising Sap, Strangling Roots.
+[mossback_treant]
+	#Every Mossback Treant skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Old Growth: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	old_growth = 1.0
+	#Thick Bark: +1 Armour per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_bark = 1.0
+	#Growth Rings: +4% Health, +1 Toughness per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	growth_rings = 1.0
+	#Deep Heartwood: Regrowth cooldown -12% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_heartwood = 1.0
+	#Elder of the Wood: Regrowth reshaped (not scaled), Sun Mend reshaped (not scaled), +10% Health (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	elder_of_the_wood = 1.0
+	#Grasping Roots: Root Snare radius +12% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	grasping_roots = 1.0
+	#Deep Roots: +0.05 Steadiness per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_roots = 1.0
+	#Root Network: Root Snare cooldown -12% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	root_network = 1.0
+	#Strangler Fig: Root Snare cooldown -15%, reshaped (not scaled) (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	strangler_fig = 1.0
+	#Broad Boughs: Scythe Sweep damage +15%, knockback +10% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	broad_boughs = 1.0
+	#Spreading Crown: Scythe Sweep range +10%, half angle +10% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spreading_crown = 1.0
+	#Windthrow: Scythe Sweep cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	windthrow = 1.0
+	#Ironwood Limbs: +5% Damage per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ironwood_limbs = 1.0
+	#Falling Giant: Scythe Sweep cooldown -20%, reshaped (not scaled), +8% Damage (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	falling_giant = 1.0
+
+#The Tide Narwhal's skills (skill tree fantasy:tide_narwhal).
+[tide_narwhal]
+	#Every Tide Narwhal skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Spiral Tusk: Surge damage +15% per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spiral_tusk = 1.0
+	#Cold Blood: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cold_blood = 1.0
+	#Blubber: +1 Armour, +3% Health per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	blubber = 1.0
+	#Deep Diver: +5% Swim speed per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_diver = 1.0
+	#Ramming Speed: Surge speed +12%, duration ticks +15%, cooldown -8% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ramming_speed = 1.0
+	#Whetted Spiral: +5% Damage per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	whetted_spiral = 1.0
+	#Ice-Breaker: Surge reshaped (not scaled), +8% Damage (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ice_breaker = 1.0
+	#Clicks and Whistles: Echolocation radius +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	clicks_and_whistles = 1.0
+	#Pod Sense: Echolocation cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	pod_sense = 1.0
+	#Song of the Pod: Echolocation cooldown -20%, reshaped (not scaled), +10% Swim speed (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	song_of_the_pod = 1.0
+	#Frost Lungs: Frost Breath range +15%, damage per second +20% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	frost_lungs = 1.0
+	#Rime Crust: +1 Armour, +1 Toughness per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rime_crust = 1.0
+	#Pack Ice: Frost Breath cooldown -12% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	pack_ice = 1.0
+	#Polar Night: Frost Breath reshaped (not scaled), +10% Ability power (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	polar_night = 1.0
+
+#The Sky Whale's skills (skill tree fantasy:sky_whale). These only grant or reshape an ability, so they have no dial: Harmony, Thermal Rider.
+[sky_whale]
+	#Every Sky Whale skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Gentle Giant: +5% Health per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gentle_giant = 1.0
+	#Low Hum: Whale Song cooldown -10% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	low_hum = 1.0
+	#Resonance: +6% Ability haste per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	resonance = 1.0
+	#Leviathan's Hymn: Whale Song cooldown -20%, reshaped (not scaled) (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	leviathans_hymn = 1.0
+	#Cloud Fins: +5% Flight speed per rank (3 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloud_fins = 1.0
+	#Great Blowhole: Wind Gust radius +15%, strength +15% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	great_blowhole = 1.0
+	#Thunderhead: Wind Gust cooldown -20%, reshaped (not scaled), +10% Flight speed (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thunderhead = 1.0
+	#Barnacle Hide: +1 Armour per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	barnacle_hide = 1.0
+	#Mighty Flukes: Tail Strike damage +20%, knockback +15% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	mighty_flukes = 1.0
+	#Deep Sounding: +6% Swim speed per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_sounding = 1.0
+	#Breaching: Tail Strike cooldown -12% per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	breaching = 1.0
+	#Breach: Tail Strike reshaped (not scaled), +10% Health (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	breach = 1.0
+
+#The Emerald Dragonfly's skills (skill tree fantasy:emerald_dragonfly). These only grant or reshape an ability, so they have no dial: Tight Turns, Endless Summer.
+[emerald_dragonfly]
+	#Every Emerald Dragonfly skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Compound Eyes: +2% Flight speed, +2% Speed per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	compound_eyes = 1.0
+	#Quick Flicker: Blink Dash cooldown -10% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quick_flicker = 1.0
+	#Long Dart: Blink Dash distance +15% per rank (3 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_dart = 1.0
+	#Slipstream: Blink Dash cooldown -15%, reshaped (not scaled) (2 points, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	slipstream = 1.0
+	#Emerald Flash: Blink Dash cooldown -25%, reshaped (not scaled), +2% Flight speed (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	emerald_flash = 1.0
+	#Sun-Warmed: +6% Stamina per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sun_warmed = 1.0
+	#Glass Wings: +1% Flight speed per rank (3 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	glass_wings = 1.0
+	#Prism Wings: Dazzle radius +15%, cooldown -10% per rank (2 ranks, 1 point each, from level 18)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	prism_wings = 1.0
+	#Skyrazor: changes how it moves (not scaled), +3% Flight speed (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	skyrazor = 1.0
+	#Spiny Legs: +5% Damage, Snatch damage +25% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spiny_legs = 1.0
+	#Hawking: Snatch range +15%, carry ticks +25% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hawking = 1.0
+	#Basket of Legs: Snatch max width +20%, max height +20% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	basket_of_legs = 1.0
+	#Green Armour: +6% Health, +0.5 Armour per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	green_armour = 1.0
+	#Hawker's Strike: Snatch cooldown -20%, reshaped (not scaled), +6% Damage (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hawkers_strike = 1.0
+
+#The Warhorn Rhino's skills (skill tree fantasy:warhorn_rhino). These only grant or reshape an ability, so they have no dial: Thundering Rush.
+[warhorn_rhino]
+	#Every Warhorn Rhino skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Thick Horn: Charge damage +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thick_horn = 1.0
+	#Heavy Tread: Trample damage +25% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heavy_tread = 1.0
+	#Lowered Head: Charge cooldown -12% per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lowered_head = 1.0
+	#Goring Horn: Charge damage +10%, knockback +10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	goring_horn = 1.0
+	#Juggernaut: Charge reshaped (not scaled), +0.2 Steadiness (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	juggernaut = 1.0
+	#Steady Platform: Archer Volley damage +15% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	steady_platform = 1.0
+	#More Archers: Archer Volley count +35% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	more_archers = 1.0
+	#Quick Reload: Archer Volley cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quick_reload = 1.0
+	#War Banner: Howl cooldown -12%, +4% Ability power per rank (2 ranks, 1 point each, from level 18)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	war_banner = 1.0
+	#Arrow Hail: Archer Volley cooldown -20%, reshaped (not scaled), Howl reshaped (not scaled) (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	arrow_hail = 1.0
+	#Plated Hide: +1 Armour per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	plated_hide = 1.0
+	#Deep Bellow: Roar radius +15%, strength +15% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	deep_bellow = 1.0
+	#Scarred Veteran: +6% Health per rank (3 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	scarred_veteran = 1.0
+	#Iron Hide: +3 Armour, +2 Toughness, Roar reshaped (not scaled) (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	iron_hide = 1.0
+
+#The Jackalope's skills (skill tree fantasy:jackalope). These only grant or reshape an ability, so they have no dial: Bounding Leap, Springheel, Double Bound.
+[jackalope]
+	#Every Jackalope skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Long Ears: +3% Speed per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	long_ears = 1.0
+	#Strong Haunches: +4% Jump per rank (3 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	strong_haunches = 1.0
+	#Moon Leaper: changes how it moves (not scaled), +6% Jump (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	moon_leaper = 1.0
+	#Quick Paws: +4% Speed per rank (3 ranks, 1 point each, from level 6)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	quick_paws = 1.0
+	#Wily: Illusion Veil cooldown -12% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wily = 1.0
+	#Tall Tales: +8% Ability haste per rank (2 ranks, 1 point each, from level 18)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	tall_tales = 1.0
+	#Now You Don't: Illusion Veil cooldown -20%, reshaped (not scaled) (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	now_you_dont = 1.0
+	#Sharp Antlers: +5% Damage per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	sharp_antlers = 1.0
+	#Headlong: Pounce forward +15%, damage +20% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	headlong = 1.0
+	#Jackrabbit Kick: Pounce cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	jackrabbit_kick = 1.0
+	#Tough Little Hare: +6% Health per rank (2 ranks, 1 point each, from level 14)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	tough_little_hare = 1.0
+	#Horned Terror: Pounce reshaped (not scaled), +6% Damage (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	horned_terror = 1.0
+
+#The Nimbus Ram's skills (skill tree fantasy:nimbus_ram). These only grant or reshape an ability, so they have no dial: Drifting, High Drift, Bountiful.
+[nimbus_ram]
+	#Every Nimbus Ram skill.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	allSkills = 1.0
+	#Soft Fleece: +5% Health per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	soft_fleece = 1.0
+	#Downy: +5% Flight speed per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	downy = 1.0
+	#Cloud Nine: changes how it moves (not scaled), +8% Flight speed (5 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloud_nine = 1.0
+	#Gentle Rain: Rain Dance radius +12% per rank (2 ranks, 1 point each)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gentle_rain = 1.0
+	#Spring Shower: Rain Dance cooldown -12% per rank (2 ranks, 1 point each, from level 8)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spring_shower = 1.0
+	#After the Rain: +6% Ability haste per rank (3 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	after_the_rain = 1.0
+	#Spring Rain: Rain Dance cooldown -25%, reshaped (not scaled), grants Bloom Trail (not scaled) (4 points, from level 22)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	spring_rain = 1.0
+	#Static Fleece: Charge damage +20%, knockback +10% per rank (2 ranks, 1 point each, from level 10)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	static_fleece = 1.0
+	#Thunder Horns: Charge cooldown -12% per rank (2 ranks, 1 point each, from level 12)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	thunder_horns = 1.0
+	#Rolling Thunder: Call Lightning damage +20%, radius +10% per rank (2 ranks, 1 point each, from level 16)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	rolling_thunder = 1.0
+	#Storm Brewing: +6% Ability power per rank (3 ranks, 1 point each, from level 18)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	storm_brewing = 1.0
+	#Tempest Ram: Call Lightning cooldown -20%, reshaped (not scaled), Charge reshaped (not scaled) (5 points, from level 24)
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	tempest_ram = 1.0

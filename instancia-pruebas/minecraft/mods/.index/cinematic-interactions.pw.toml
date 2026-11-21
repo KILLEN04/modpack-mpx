@@ -1,0 +1,21 @@
+filename = 'CinematicInteraction-NeoForge-1.21.1-0.18.2.jar'
+name = 'Cinematic Interactions'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Cinematic Interactions 0.18.2 — NeoForge 1.21.1'
+
+[download]
+hash = 'bb72574f0f1fccb9856d3964d3d6011937439c1a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9220261
+project-id = 1743441
+
+[[x-prismlauncher-dependencies]]
+addonId = '348521'
+type = 'OPTIONAL'

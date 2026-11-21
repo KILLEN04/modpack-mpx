@@ -1,0 +1,21 @@
+filename = 'bookofdragons-1.4.1-1.21.1.jar'
+name = 'Book of Dragons'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'bookofdragons-1.4.1-1.21.1.jar'
+
+[download]
+hash = '723c867e3714827e5f82c9abb3854186e77baffa'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9501968
+project-id = 1413424
+
+[[x-prismlauncher-dependencies]]
+addonId = '1766276'
+type = 'REQUIRED'

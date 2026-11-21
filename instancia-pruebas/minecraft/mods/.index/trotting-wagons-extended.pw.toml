@@ -1,0 +1,29 @@
+filename = 'trotting-wagons-extended-2.0.0.jar'
+name = 'Trotting Wagons Extended'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'trotting-wagons-extended-2.0.0.jar'
+
+[download]
+hash = 'a329f35b4003faa8c43c77d2a5c6e926594f56a1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9548082
+project-id = 1796948
+
+[[x-prismlauncher-dependencies]]
+addonId = '426235'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1698729'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '388172'
+type = 'REQUIRED'

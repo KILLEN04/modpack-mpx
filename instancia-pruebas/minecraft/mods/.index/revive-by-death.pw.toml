@@ -1,0 +1,18 @@
+filename = 'revivebydeath-neoforge-1.21.1-1.2.1.jar'
+name = 'Revive By Death'
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.2.1-neoforge-1.21.1'
+
+[download]
+hash = '046da713295e9c0a087de447604bb7f56db481497cf4fda71ae89823a9c3d8f4d6dbed7103b8e8d9de3fd3d2f438e0ba142cdd656655525105ef24ed6be787d3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/2IFO7WqO/versions/6774VEo9/revivebydeath-neoforge-1.21.1-1.2.1.jar'
+
+[update.modrinth]
+mod-id = '2IFO7WqO'
+version = '6774VEo9'

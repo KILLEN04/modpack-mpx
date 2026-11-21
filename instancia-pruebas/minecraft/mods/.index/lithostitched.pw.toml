@@ -1,0 +1,18 @@
+filename = 'lithostitched-1.8.1-neoforge-21.1.jar'
+name = 'Lithostitched'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'v1.8.1 ~ Neoforge 21.1'
+
+[download]
+hash = '88cdded5b617e19b4d2676948b5550699de23578'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9170709
+project-id = 936015

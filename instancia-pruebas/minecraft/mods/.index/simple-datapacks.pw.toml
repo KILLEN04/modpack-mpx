@@ -1,0 +1,25 @@
+filename = 'simple-datapacks-2.9.1-neoforge+1.21.jar'
+name = 'Simple Datapacks'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1 rc1', '1.21.1-rc1', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.9.1-neoforge+1.21'
+
+[download]
+hash = '18f77a98f1eedf002bd926ddfe8918f59f0c96faffdd267f08350a9b48c6a5f837cd30e40fe0124b4033f03b90e859a1216ce13ba3dcaad95c5c13c2b79afa2f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Re6xQ62Z/versions/llXWb3Oq/simple-datapacks-2.9.1-neoforge%2B1.21.jar'
+
+[update.modrinth]
+mod-id = 'Re6xQ62Z'
+version = 'llXWb3Oq'
+
+[[x-prismlauncher-dependencies]]
+addonId = '9s6osm5g'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'PY2YT7QI'
+type = 'OPTIONAL'

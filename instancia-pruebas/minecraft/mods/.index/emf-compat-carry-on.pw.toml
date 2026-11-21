@@ -1,0 +1,29 @@
+filename = 'emf_compat_carry_on_neoforge_1.21.1_2.1.1.jar'
+name = 'EMF Compat: Carry On'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'emf_compat_carry_on_neoforge_1.21.1_2.1.1.jar'
+
+[download]
+hash = '4897c5eb54bf485564bddf996ad4c7411ce31ace'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9205862
+project-id = 1605159
+
+[[x-prismlauncher-dependencies]]
+addonId = '844662'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1605113'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '274259'
+type = 'OPTIONAL'

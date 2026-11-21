@@ -1,0 +1,41 @@
+filename = 'emf_compat_gliders_1.21.1_2.0.0.jar'
+name = 'EMF Compat: Gliders'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'emf_compat_gliders_1.21.1_2.0.0.jar'
+
+[download]
+hash = '12240bb92b02364f931a48a1e9289b934fcc2241'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8793943
+project-id = 1629264
+
+[[x-prismlauncher-dependencies]]
+addonId = '568563'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '844662'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1528600'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1605113'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '289240'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '828331'
+type = 'OPTIONAL'

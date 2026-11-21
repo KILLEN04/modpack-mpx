@@ -1,0 +1,649 @@
+#The format of this file. The mod keeps it up to date, carrying your settings over when an update renames or moves one. Leave it as it is.
+# Default: 1
+# Range: > 1
+configVersion = 1
+
+#Who may ride and drive mounts.
+[riding]
+	#Who may take a mount's driver seat: OWNER, TRUSTED (owner + trusted list) or ANYONE.
+	#Allowed Values: OWNER, TRUSTED, ANYONE
+	riderPermission = "OWNER"
+	#Let owners trust other players from the mount screen. Trusted players may open the saddlebags and, with riderPermission TRUSTED, drive. Off: the list is hidden and ignored.
+	trustedRiders = true
+	#Allow tamed pets and villagers on passenger seats that permit them.
+	nonPlayerPassengers = true
+
+#Rules for flying mounts. These only restrict what a mount's definition allows.
+[flight]
+	#Allow mounts to fly at all.
+	enabled = true
+	#Dimensions where mounts may fly (dimension ids).
+	allowedDimensions = ["minecraft:overworld", "minecraft:the_end"]
+	#Highest Y a flying mount may climb to.
+	# Default: 320.0
+	# Range: -64.0 ~ 4096.0
+	maxAltitude = 320.0
+	#Upper bound on any mount's flight speed, in blocks per tick (keep below chunk loading).
+	# Default: 1.8
+	# Range: 0.1 ~ 4.0
+	maxSpeed = 1.8
+	#Seconds a rider can't take off after taking damage from another player.
+	# Default: 10
+	# Range: 0 ~ 600
+	combatLockoutSeconds = 10
+	#If true, a mount that runs out of stamina takes fall damage when it lands.
+	fallDamageOnStall = false
+	#Seconds of slow falling given to riders when their mount dies in the air (0: none).
+	# Default: 10
+	# Range: 0 ~ 60
+	deathSlowFallSeconds = 10
+
+#Server-wide switches for mount abilities.
+[abilities]
+	#Allow abilities to change blocks beyond temporary crusts: fire breath sets fire to what it hits. Needs mobGriefing too; claim mods can still deny it.
+	allowBlockDamage = false
+	#Allow mount abilities to damage other players (web shots have their own switch: webShotPvP).
+	allowPvP = false
+	#Let web shots (the Giant Spider's) hold other players in place and hurt them. Separate from allowPvP, so a server can allow one without the other. How long the web holds and how much it hurts are set in data packs (root_ticks and damage on fantasy:web_shot).
+	webShotPvP = false
+	#Range in blocks of the Golden Carrot Stew's glowing vision.
+	# Default: 500
+	# Range: 0 ~ 10000
+	glowingVisionRange = 500
+	#When abilities may place blocks that fade by themselves (frost-walk ice, lava crusts, sky bridges, wisp lights). WITH_MOB_GRIEFING: only while the mobGriefing game rule is on. ALWAYS: whatever mobGriefing says (lava walking and sky bridges keep working on servers that turn mob griefing off). NEVER: those abilities run without their blocks. Claim mods can still deny a block either way.
+	#Allowed Values: ALWAYS, WITH_MOB_GRIEFING, NEVER
+	temporaryBlocks = "WITH_MOB_GRIEFING"
+	#Glowing mounts (and wild ones whose behaviour glows) light up what is around them: an invisible light block follows each one as it moves. Off: they still glow, but light nothing, which spares a busy server those block and lighting updates.
+	glowingMountsLightTheWorld = true
+
+#Mount levels, ability unlocks, stat growth and skill trees. To fine-tune the level curve, the level cap, skill points or XP per activity, see fantasy-balance.toml; to make single skills stronger or weaker, see fantasy-skills.toml.
+[progression]
+	#Tamed mounts earn experience, level up, unlock abilities and learn skills. Off: every ability is there from taming and nothing grows (progress is kept for when it is turned back on).
+	enabled = true
+	#Multiplies all experience mounts earn (2.0 levels them twice as fast, 0 stops levelling). Quests' bond items are multiplied as they are handed out, and keep the worth they show.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	xpMultiplier = 1.0
+	#Abilities wait for the level they unlock at. Off: every ability from taming.
+	lockAbilitiesByLevel = true
+	#Mounts' stats rise a little with each level, as their definition says.
+	statGrowth = true
+	#Mounts earn skill points to spend in their skill tree. Off: learned skills have no effect.
+	skillTrees = true
+	#How owners change learned skills. RESPEC: right-click learned skills on the mount's profile to unlearn them, pick others, and press Save; then no skill can be unlearned again until respecCooldownSeconds pass (a Renewal Tonic still resets every skill at once, at any time). TONIC: only a Renewal Tonic, which resets every skill at once.
+	#Allowed Values: RESPEC, TONIC
+	skillResetMode = "RESPEC"
+	#With skillResetMode RESPEC: seconds of game time after a mount's skills are changed before any can be unlearned again (learning new ones never waits). 0: no wait.
+	# Default: 600
+	# Range: 0 ~ 604800
+	respecCooldownSeconds = 600
+
+#What taming gives a mount. How quickly mounts are tamed is in fantasy-balance.toml.
+[taming]
+	#A mount can't be killed from the moment it is tamed: nothing harms it, and one that falls out of the world is brought back. Only an operator's /kill still works. Wild mounts are mortal as ever.
+	immortal = false
+
+#What untamed mounts do on their own where they live: grazing, burrowing, howling, hunting and more. Which behaviours a mount has is set in data packs (its definition's wild block).
+[wild]
+	#Untamed mounts graze, burrow, bask, sleep, call, hunt and the rest on their own. Off: they only wander and look around.
+	behaviors = true
+	#Let wild behaviours change the world as animals do: grazers eat grass down to dirt, spiders spin webs that fade, treants and qilin grow plants, hoarders pick up dropped items. Needs mobGriefing too; claim mods can still deny it.
+	blockChanges = true
+	#Let wild predators hunt small wild animals (never pets, named or leashed animals, or players).
+	hunting = true
+	#Let foragers turn up small finds as they dig and root around (flint, berries, a nugget, now and then raw iron or copper), left where they find them. Off: they forage without finding anything.
+	forageFinds = true
+	#Let hoarding mounts carry dropped items off to a pile of their own. Needs blockChanges too.
+	hoarding = true
+
+#The Mount Whistle, which calls a tamed mount to follow you.
+[whistle]
+	#Should mounts obey the Mount Whistle.
+	allowWhistle = true
+	#Mount is immune to damage while following its whistle.
+	immuneWhileFollowing = true
+	#Whistle sound volume (1.0 = 100%).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	soundVolume = 1.0
+	#Max blocks away a mount can be for whistle commands. The mount must be in the same dimension and in a loaded area either way.
+	# Default: 2000.0
+	# Range: 1.0 ~ 3.0E7
+	maxDistance = 2000.0
+	#A mount following its whistle teleports to its owner when it falls far behind (as tamed wolves do). Off: it always walks or flies the whole way. The distance is in fantasy-balance.toml.
+	teleport = true
+	#The whistle calls its mount from anywhere: any distance, any dimension, an unloaded chunk. A mount out of reach (beyond maxDistance, in another dimension, or where it can't move) is brought to its owner's side and follows them. Off: only a mount within maxDistance in a loaded area hears it.
+	recallAnywhere = true
+
+#Shiny mounts: a rare look of their own (a new colour, glow, extra parts and an aura), rolled once when a mount first spawns.
+[shiny]
+	#A mount is shiny 1 time in this many: wild, from a spawn egg, and bred unless breedingOdds says otherwise. 0 turns shinies off, foals too.
+	# Default: 4096
+	# Range: 0 ~ 1000000
+	odds = 4096
+	#A bred foal is shiny 1 time in this many (parentOdds when a parent is shiny and they are better). 0: the same as odds.
+	# Default: 0
+	# Range: 0 ~ 1000000
+	breedingOdds = 0
+	#A foal with a shiny parent is shiny 1 time in this many (used only when better than a foal's usual odds). 0: foals of shinies have the usual odds.
+	# Default: 512
+	# Range: 0 ~ 1000000
+	parentOdds = 512
+
+#Seasonal looks: at times of the year some wild mounts spawn in a look of the season (a new coat, extra parts, an aura, and abilities that look and sound the part), rolled once when a mount first spawns and kept for life.
+[seasonal]
+	#A mount in a seasonal look also gets its look's ability twists: one of an ability's status effects swapped for another of the same length and level (the Halloween Doom Horse's Dread Neigh brings Darkness in place of Weakness). Never stronger: damage, range and cooldowns don't change. Off: a look changes only how its abilities look and sound.
+	abilityTwists = true
+	#The time zone the seasons' dates are read in: when each season's looks begin and end, and seasonal abilities. A zone id (America/New_York, the default, so every server's seasons turn over together at midnight Eastern; Europe/London; UTC), or "local" for this server's own clock.
+	timeZone = "America/New_York"
+
+	#The halloween looks.
+	[seasonal.halloween]
+		#When halloween looks spawn: SEASONAL (from start to end, by the date in seasonal.timeZone), ALWAYS (all year) or OFF (never; mounts that have the look keep it).
+		#Allowed Values: SEASONAL, ALWAYS, OFF
+		mode = "SEASONAL"
+		#First day of the season, MM-DD (month-day).
+		start = "10-25"
+		#Last day of the season, MM-DD, included. An end before the start runs over the new year. A date that isn't a day of the year uses the default.
+		end = "11-08"
+		#While the season's looks spawn, a spawned mount that has a halloween look (wild or from a spawn egg) is in it 1 time in this many. 0: never.
+		# Default: 4
+		# Range: 0 ~ 1000000
+		odds = 4
+
+#The Riders Encyclopedia: each player's guide to the mounts they have come across.
+[encyclopedia]
+	#How close, in blocks, a mount must come in plain sight to fill in its encyclopedia entry. Touching, riding or taming one always does.
+	# Default: 16
+	# Range: 4 ~ 64
+	discoveryRange = 16
+	#Every entry is filled in from the start, as a plain guide (discoveries are still recorded).
+	revealAll = false
+	#Tell players above the hotbar when they discover a mount, with the key that opens the encyclopedia.
+	discoveryHint = true
+
+#Quests: the narrator (in the shipped quests Professor Thornquill, the wandering bestiarist) writes to players in their Field Journal when they meet or tame a mount, with tasks about it. Rewards and hints are scaled in fantasy-balance.toml; the quests and the people in them are data (data/<namespace>/fantasy_quest and fantasy_quest_speaker).
+[quests]
+	#Quests and their narrator. Off: no introduction, no letters, no quest tracker, and no quest NPCs or foes. Players' quest progress is kept for when quests are turned back on.
+	enabled = true
+	#Greet each player with the narrator's introduction (and its first quest) the first time they join the world.
+	introduction = true
+	#Let quests place their people and foes in the world: the narrator's camp, a captive to rescue, a named foe. Off: such an objective counts once the player stands where it would have been.
+	encounters = true
+	#Keep a mount's Riders Encyclopedia entry to what anyone who met one could tell (its picture, name, description, temperament, size and riders, and the player's own field notes) until the player finishes one of the mount's quests: where it lives, how to tame and breed it, how it rides, its abilities and stats open then. How to tame one opens early once a quest asks the player to tame one. Mounts without quests, or switched off, show in full, and nothing is held back while quests are off or encyclopedia.revealAll is on.
+	lockEncyclopedia = true
+
+	#Earn mounts through their quests (off unless enabled is true). While on, a player who hasn't finished one of a kind of mount's quests can still tame, saddle, equip and whistle for one, but can't do what is switched on below until they finish one. Mounts with no quests are never held back, and nothing is while quests.enabled is false. A quest that asks the player to ride one or raise one to a level opens that early, so a quest is never held back by this.
+	[quests.earnMounts]
+		#Make players finish one of a kind of mount's quests before they may do what is switched on below with mounts of that kind. Off: riding, breeding and bond items are never held back, whatever the switches below say.
+		enabled = false
+		#Only while enabled is true: hold back riding. The player can't take the reins of a tamed mount of the kind (its driver's seat; a passenger seat on someone else's mount stays open). Checked as they get on. Taming one by riding it still works.
+		riding = true
+		#Only while enabled is true: hold back breeding. The player can't feed mounts of the kind into love mode.
+		breeding = true
+		#Only while enabled is true: hold back bond items. The player can't give bond items (Bond Shards and Crystals) to mounts of the kind; they still level up as they follow and fight.
+		bondItems = true
+
+#Whether a dedicated server says in its log when a new Fantasy Mounts is out.
+[updates]
+	#On a dedicated server: when it starts, and at most about twice a day, ask fantasymounts.com whether a newer Fantasy Mounts is out, and if so say so in one line of the server log (players are never told). The request carries only the mod's version. Off: never ask. Forge's and NeoForge's versionCheck = false in config/fml.toml turns it off too.
+	check = true
+
+#Other mods' biomes the mounts spawn in, when those mods are installed (a mod that isn't changes nothing). Which of a mod's biomes each mount takes is set in data packs: the biome tag #fantasy:integrations/<mod>/<mount>. How often they spawn there is in fantasy-balance.toml. A change applies to the next spawn, with no restart.
+[integrations]
+	#Mounts spawn in other mods' biomes as well as vanilla's. Off: only in the biomes their own spawn data names.
+	enabled = true
+
+	#Biomes O' Plenty (https://modrinth.com/mod/biomes-o-plenty), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.biomesoplenty]
+		#Mounts spawn in Biomes O' Plenty's biomes.
+		enabled = true
+		#Mounts that never spawn in Biomes O' Plenty's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Terralith (https://modrinth.com/mod/terralith), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.terralith]
+		#Mounts spawn in Terralith's biomes.
+		enabled = true
+		#Mounts that never spawn in Terralith's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Oh The Biomes We've Gone (https://modrinth.com/mod/oh-the-biomes-weve-gone), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11.
+	[integrations.biomeswevegone]
+		#Mounts spawn in Oh The Biomes We've Gone's biomes.
+		enabled = true
+		#Mounts that never spawn in Oh The Biomes We've Gone's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Nature's Spirit (https://modrinth.com/mod/natures-spirit), on Minecraft 1.20.1, 1.21.1, 26.1.2.
+	[integrations.natures_spirit]
+		#Mounts spawn in Nature's Spirit's biomes.
+		enabled = true
+		#Mounts that never spawn in Nature's Spirit's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Regions Unexplored (https://modrinth.com/mod/regions-unexplored), on Minecraft 1.20.1, 1.21.1, 26.1.2.
+	[integrations.regions_unexplored]
+		#Mounts spawn in Regions Unexplored's biomes.
+		enabled = true
+		#Mounts that never spawn in Regions Unexplored's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Promenade (https://modrinth.com/mod/promenade), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.promenade]
+		#Mounts spawn in Promenade's biomes.
+		enabled = true
+		#Mounts that never spawn in Promenade's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Alex's Caves (https://modrinth.com/mod/alexs-caves), on Minecraft 1.20.1.
+	[integrations.alexscaves]
+		#Mounts spawn in Alex's Caves's biomes.
+		enabled = true
+		#Mounts that never spawn in Alex's Caves's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#YUNG's Cave Biomes (https://modrinth.com/mod/yungs-cave-biomes), on Minecraft 1.20.1, 1.21.1, 26.1.2.
+	[integrations.yungscavebiomes]
+		#Mounts spawn in YUNG's Cave Biomes's biomes.
+		enabled = true
+		#Mounts that never spawn in YUNG's Cave Biomes's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Deeper and Darker (https://modrinth.com/mod/deeperdarker), on Minecraft 1.20.1, 1.21.1.
+	[integrations.deeperdarker]
+		#Mounts spawn in Deeper and Darker's biomes.
+		enabled = true
+		#Mounts that never spawn in Deeper and Darker's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Incendium (https://modrinth.com/mod/incendium), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.incendium]
+		#Mounts spawn in Incendium's biomes.
+		enabled = true
+		#Mounts that never spawn in Incendium's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#Nullscape (https://modrinth.com/mod/nullscape), on Minecraft 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.nullscape]
+		#Mounts spawn in Nullscape's biomes.
+		enabled = true
+		#Mounts that never spawn in Nullscape's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#BetterNether (https://modrinth.com/mod/betternether), on Minecraft 1.20.1, 1.21.1, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.betternether]
+		#Mounts spawn in BetterNether's biomes.
+		enabled = true
+		#Mounts that never spawn in BetterNether's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+	#BetterEnd (https://modrinth.com/mod/betterend), on Minecraft 1.20.1, 1.21.1, 1.21.11, 26.1.2, 26.2, 26.3.
+	[integrations.betterend]
+		#Mounts spawn in BetterEnd's biomes.
+		enabled = true
+		#Mounts that never spawn in BetterEnd's biomes, e.g. ["sky_whale", "fantasy:moonwolf"].
+		excludedMounts = []
+
+#Per-mount switches. Each mount's stats can be scaled in fantasy-balance.toml; its seats, foods, spawns and art are set in data packs (data/<namespace>/fantasy_mount/<mount>.json and friends).
+[mounts]
+
+	#Settings for the unicorn.
+	[mounts.unicorn]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the polar bear.
+	[mounts.polar_bear]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the doom horse.
+	[mounts.doom_horse]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the pegasus.
+	[mounts.pegasus]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the giant spider.
+	[mounts.giant_spider]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the war mammoth.
+	[mounts.war_mammoth]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the dragon turtle.
+	[mounts.dragon_turtle]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the frost sabrecat.
+	[mounts.frost_sabrecat]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the phoenix.
+	[mounts.phoenix]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the crystal stag.
+	[mounts.crystal_stag]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the griffin.
+	[mounts.griffin]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the qilin.
+	[mounts.qilin]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the luna moth.
+	[mounts.luna_moth]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the kitsune.
+	[mounts.kitsune]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the bog toad.
+	[mounts.bog_toad]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the frost drake.
+	[mounts.frost_drake]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the moonwolf.
+	[mounts.moonwolf]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the mossback treant.
+	[mounts.mossback_treant]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the tide narwhal.
+	[mounts.tide_narwhal]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the sky whale.
+	[mounts.sky_whale]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the emerald dragonfly.
+	[mounts.emerald_dragonfly]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the warhorn rhino.
+	[mounts.warhorn_rhino]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the jackalope.
+	[mounts.jackalope]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []
+
+	#Settings for the nimbus ram.
+	[mounts.nimbus_ram]
+		#If false, this mount can't be spawned, tamed or ridden and doesn't spawn naturally.
+		enabled = true
+		#Allow natural spawns in the wild.
+		wildSpawns = true
+		#Cap on riders (0 = as many seats as the mount has).
+		# Default: 0
+		# Range: 0 ~ 8
+		maxRiders = 0
+		#Allow breeding.
+		allowBreeding = true
+		#Ability ids to switch off for this mount, e.g. ["fantasy:frost_walk"].
+		disabledAbilities = []

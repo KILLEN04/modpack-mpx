@@ -1,0 +1,18 @@
+filename = 'minevegas-casino-neoforge-1.21.1-1.1.2.jar'
+name = 'MineVegas Casino'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'minevegas-casino-neoforge-1.21.1-1.1.2.jar'
+
+[download]
+hash = '5b9c2455959ffed4a53a402745511710e877af34'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9548047
+project-id = 1732776

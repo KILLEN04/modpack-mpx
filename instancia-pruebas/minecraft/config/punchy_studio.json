@@ -1,0 +1,21 @@
+{
+  "interface_scale": 0.0,
+  "show_frames": false,
+  "only_selected": false,
+  "graph_editor": false,
+  "snapping": true,
+  "perspective": "first_person",
+  "third_person_pack": "",
+  "timeline_ratio": 0.36,
+  "sidebar_width": 248,
+  "open_key_migrated": true,
+  "keymap": "studio",
+  "onboarded": true,
+  "orbit_invert_x": false,
+  "orbit_invert_y": false,
+  "zoom_invert": false,
+  "orbit_speed": 1.0,
+  "zoom_speed": 1.0,
+  "show_grid": true,
+  "tooltips": true
+}

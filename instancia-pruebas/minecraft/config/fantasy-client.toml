@@ -1,0 +1,177 @@
+#The format of this file. The mod keeps it up to date, carrying your settings over when an update renames or moves one. Leave it as it is.
+# Default: 2
+# Range: > 1
+configVersion = 2
+
+#How riding feels on this computer.
+[riding]
+	#Let passengers look around freely where the seat allows it.
+	passengerFreeLook = true
+	#LOOK: fly where you look (like the happy ghast). KEYS: jump ascends, the descend key descends, and looking around doesn't steer.
+	#Allowed Values: LOOK, KEYS
+	flightControlStyle = "LOOK"
+	#Keep the first-person camera steady instead of following the mount's bob.
+	reduceMountCameraMotion = false
+	#How much riders move with their mount: carried by its stride, rearing, flight and swimming, and leaning with its speed and turns. 0 sits riders still on the saddle, as vanilla does (use it if another mod animates riders).
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	riderMotion = 1.0
+	#How hard powerful abilities, like the Doom Horse's flaming charge, shake the camera: 0 turns it off, 1 is full strength. Vanilla's Distortion Effects slider scales it too.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	abilityCameraShake = 1.0
+	#Pull the third-person camera back on large mounts.
+	bigMountCameraZoom = true
+	#Switch a third-person view to first person in tight spots while riding: ducking into the saddle under a low ceiling (a cave, a tunnel), or with no room behind your head for the camera. Your view comes back once there is room again.
+	tightSpotFirstPerson = true
+	#While driving, the attack key makes your mount attack (with its attack animation) instead of you swinging; hold the Mount attack modifier key and attack to swing yourself. Off: you swing as normal, and modifier + attack makes the mount attack. The modifier is whatever key Sprint is on unless you bind Mount attack modifier in Controls.
+	attackKeyCommandsMount = false
+
+#Volume of the mod's sounds by kind, on top of the game's own volume sliders (1.0 = full, 0 = silent). Mounts are under the game's Friendly Creatures slider, the whistle under Players.
+[audio]
+	#Mounts' calls: the neighs, roars and chirps they make now and then, and wild mounts' howls and trumpeting.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	mountCalls = 1.0
+	#Everything else mounts make themselves: steps, wings, jumps, hurt cries, their abilities and what wild mounts get up to. A dying mount's last cry and an ability's hit far off keep the game's own volume.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	mountSounds = 1.0
+	#The Mount Whistle (the server sets how loud it is for everyone; this scales it for you).
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	whistle = 1.0
+	#Level-ups, learned skills and skill resets, and the chime of a shiny mount.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	milestones = 1.0
+	#Clicks and page turns in the mod's screens.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	interface = 1.0
+	#The soft voice the dialogue box gives a line as it writes it out (0 writes in silence).
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	dialogue = 1.0
+
+#The mount HUD: the ability tiles, the mount's level and a flying mount's stamina. The HUD editor (the HUD button in the mount profile, the theme picker or the Edit HUD key) moves, turns and hides each piece.
+[hud]
+	#Show the mount HUD while riding (false hides every piece of it at once).
+	enabled = true
+	#Show the stamina bar of a flying mount.
+	showStamina = true
+	#Show the ability tiles with their keys and cooldowns.
+	showAbilities = true
+	#Show your mount's level, with its progress to the next one under it.
+	showLevel = true
+	#When boarding a mount with several seats, show how to switch seats.
+	seatHint = true
+
+	#Where the ability tiles are.
+	[hud.abilities]
+		#Whether this piece was moved in the HUD editor. false: in its usual place, in a row beside the hotbar.
+		moved = false
+		#Once moved, the point of the screen it keeps to as the window changes size: a corner (TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT), the middle of a side (TOP_CENTER, MIDDLE_LEFT, MIDDLE_RIGHT, BOTTOM_CENTER) or CENTER.
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, MIDDLE_LEFT, CENTER, MIDDLE_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "BOTTOM_CENTER"
+		#Once moved, pixels from the side of the screen it keeps to (from the centre line, negative to the left, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		x = 0
+		#Once moved, pixels from the top or bottom of the screen it keeps to (from the centre line, negative upwards, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		y = 0
+		#Stack the ability tiles in a column instead of a row.
+		vertical = false
+
+	#Where the mount's level is.
+	[hud.level]
+		#Whether this piece was moved in the HUD editor. false: in its usual place, beside the hotbar.
+		moved = false
+		#Once moved, the point of the screen it keeps to as the window changes size: a corner (TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT), the middle of a side (TOP_CENTER, MIDDLE_LEFT, MIDDLE_RIGHT, BOTTOM_CENTER) or CENTER.
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, MIDDLE_LEFT, CENTER, MIDDLE_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "BOTTOM_CENTER"
+		#Once moved, pixels from the side of the screen it keeps to (from the centre line, negative to the left, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		x = 0
+		#Once moved, pixels from the top or bottom of the screen it keeps to (from the centre line, negative upwards, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		y = 0
+
+	#Where the stamina bar is.
+	[hud.stamina]
+		#Whether this piece was moved in the HUD editor. false: in its usual place, over the hotbar, in the experience bar's place.
+		moved = false
+		#Once moved, the point of the screen it keeps to as the window changes size: a corner (TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT), the middle of a side (TOP_CENTER, MIDDLE_LEFT, MIDDLE_RIGHT, BOTTOM_CENTER) or CENTER.
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, MIDDLE_LEFT, CENTER, MIDDLE_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "BOTTOM_CENTER"
+		#Once moved, pixels from the side of the screen it keeps to (from the centre line, negative to the left, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		x = 0
+		#Once moved, pixels from the top or bottom of the screen it keeps to (from the centre line, negative upwards, when it keeps to the middle).
+		# Default: 0
+		# Range: -4000 ~ 4000
+		y = 0
+
+#How the Mount Whistle shows where its mount is.
+[whistle]
+	#Show the registered mount's icon on the whistle in inventory and hotbar slots. The tooltip says where the mount is.
+	showOnSlot = true
+
+#How shiny mounts announce themselves.
+[shiny]
+	#Play a chime and a burst of sparkles when a shiny mount comes into view.
+	reveal = true
+
+#Seasonal looks (Halloween and the like) on this computer.
+[seasonal]
+	#Draw mounts in their seasonal looks (Halloween and the like): coat, extra parts, aura and figures riding along. Off: they are drawn in their plain coats on this computer; nothing changes on the server or for other players.
+	showLooks = true
+
+#How the mod's screens look.
+[ui]
+	#The look of the mount profile, skill tree, Riders Encyclopedia, mount screen and HUD: fantasy:starlit, fantasy:overworld, fantasy:wildwood, fantasy:vanilla (themes off, plain Minecraft style), or a theme a resource pack adds (namespace:name). The theme picker in game changes it too.
+	theme = "fantasy:starlit"
+
+#The quest tracker on the screen and the narrator's letters. The HUD editor (the Field Journal's Quest tracker button) moves, resizes, minimizes and hides the tracker too.
+[quests]
+	#Show the quest tracker: the tracked quest's stage, objectives and where to go.
+	tracker = true
+	#Show the tracker as one line: the quest and how far along it is.
+	trackerMinimized = false
+	#How big the tracker and its text are drawn: SMALL, MEDIUM or LARGE (the GUI scale). Each keeps the text crisp, so at a low GUI scale two of them can look the same.
+	#Allowed Values: SMALL, MEDIUM, LARGE
+	trackerSize = "MEDIUM"
+	#The point of the screen the tracker keeps to as the window changes size: a corner (TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT), the middle of a side (TOP_CENTER, MIDDLE_LEFT, MIDDLE_RIGHT, BOTTOM_CENTER) or CENTER.
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, MIDDLE_LEFT, CENTER, MIDDLE_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	trackerAnchor = "TOP_LEFT"
+	#Pixels between the tracker and the side of the screen it keeps to (from the centre line, negative to the left, when it keeps to the middle).
+	# Default: 4
+	# Range: -4000 ~ 4000
+	trackerX = 4
+	#Pixels between the tracker and the top or bottom of the screen it keeps to (from the centre line, negative upwards, when it keeps to the middle).
+	# Default: 4
+	# Range: -4000 ~ 4000
+	trackerY = 4
+	#Which quest dialogue comes to you. ALL: the narrator's letters open by themselves when it is safe (on the ground, not fighting, no screen open), and people speak when you talk to them. NOTIFY_ONLY: the tracker tells you of new letters and the Field Journal key opens them; only the introduction opens by itself. NPCS_ONLY: the narrator stays quiet, even for the introduction. OFF: no dialogue opens, not even when you talk to people. Letters always wait in the Field Journal.
+	#Allowed Values: ALL, NOTIFY_ONLY, NPCS_ONLY, OFF
+	dialogue = "ALL"
+	#How fast the dialogue box writes out a line (a click always finishes it).
+	#Allowed Values: SLOW, NORMAL, FAST, INSTANT
+	textSpeed = "NORMAL"
+	#Say above the hotbar when a quest objective moves on (Skeletons 3/6).
+	progressMessages = true
+
+#The mod's key bindings.
+[keys]
+	#When the game starts, look for Fantasy Mounts keys that share their key with another control (Minecraft's, another mod's or another of ours) and offer a free key for each in a small window, naming the mod each other control belongs to. Off: never look (the window's Don't check again box turns it off too); Controls still marks shared keys red.
+	checkAtLaunch = false
+
+#Whether the game tells you when a new Fantasy Mounts is out.
+[updates]
+	#At most about twice a day, ask fantasymounts.com whether a newer Fantasy Mounts is out for your Minecraft version and loader, and if so say so on the title screen and in your own worlds (never while you play on someone else's server, whose owner picks its version). The request carries only the mod's version. Off: never ask. Forge's and NeoForge's versionCheck = false in config/fml.toml turns it off too.
+	check = true
