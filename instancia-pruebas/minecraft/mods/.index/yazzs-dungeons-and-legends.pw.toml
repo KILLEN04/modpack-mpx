@@ -1,0 +1,21 @@
+filename = "Yazz's Redstone Golem - NeoForge - 1.1.1.jar"
+name = "Yazz's Dungeons and Legends "
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = "Yazz's Redstone Golem - NeoForge - 1.1.1"
+
+[download]
+hash = '628e6388ed3749464d2a5f74dce8037490a029ac'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7206797
+project-id = 1354741
+
+[[x-prismlauncher-dependencies]]
+addonId = '388172'
+type = 'REQUIRED'
